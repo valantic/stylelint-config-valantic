@@ -34,6 +34,14 @@ After restarting your console you should be able to install the scss-lint gem.
 $ gem install scss_lint
 ```
 
+## Use
+
+Copy the config file ```.scss-lint.yml``` from this repository to your project and run ```$ scss-lint``` from console, while in the root folder of your project
+
+### Adjusting folders
+
+The config was created with ember.js in mind. The linter checks all \*.scss files in the project folder except the ones defined under ```exclude``` in the ```.scss-lint.yml``` file. You may wish to extend this list.
+
 ## Disable specific linters with inline comments
 
 In some rare cases it can be useful to disable a linter (e.g. if you need a special hack). You can do this by using a special comment which you should define inside a single block
