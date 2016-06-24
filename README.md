@@ -36,7 +36,7 @@ $ gem install scss_lint
 
 ## Use
 
-Copy the config file ```.scss-lint.yml``` from this repository to your project and run ```$ scss-lint``` from console, while in the root folder of your project
+Copy the config file ```.scss-lint.yml``` from this repository to your project and run ```$ scss-lint``` from console, while in the root folder of your project.
 
 ### Adjusting folders
 
