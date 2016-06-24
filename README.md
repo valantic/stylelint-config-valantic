@@ -260,13 +260,13 @@ The basenames of @imported SCSS partials should not begin with an underscore and
 @import "component/_style.scss"; // Error: don't write low dash (_) and suffix (.scss)
 ```
 
-### Indentation (true, space, 4)
+### Indentation (true, space, 2)
 
-We use 4 spacings for indentation.
+We use 2 spacings for indentation.
 
 ```sass
 .foo { 
-  color: $color-primary; // Error: use 4 spaces
+    color: $color-primary; // Error: use 2 spaces
 }
 ```
 
