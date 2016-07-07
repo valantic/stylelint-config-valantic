@@ -1,6 +1,6 @@
 # SCSS
 
-**Changes to the Frontend configs repro or project specific settings are only allowed in agreement with the frontend  or project team.**
+**Changes to the Frontend configs repo or project specific settings are only allowed in agreement with the frontend  or project team.**
 
 To ensure a high an consistent code quality for SCSS we use scss-lint.
 
