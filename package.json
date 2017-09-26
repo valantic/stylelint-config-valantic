@@ -1,0 +1,23 @@
+{
+  "name": "stylelint-config-movento",
+  "version": "1.0.0",
+  "description": "Default movento configuration for stylelint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@codebasehq.com:movento2/frontend-configs/scss.git"
+  },
+  "author": "movento",
+  "license": "ISC",
+  "dependencies": {
+    "stylelint": "^8.1.1",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-scss": "^2.1.0"
+  },
+  "devDependencies": {
+    "stylelint": "^8.1.1"
+  }
+}
