@@ -1,0 +1,50 @@
+.c-order-history {
+
+  &__header {
+    position: relative;
+    background-color: $color-gray-4;
+    border: 1px solid $color-gray-1;
+    border-radius: $e-form-base-border-radius;
+    padding: 15px;
+    flex-wrap: wrap;
+  }
+
+  &__header-fields {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-gray-3;
+    font-family: $font-family-light;
+    font-size: $font-size-24;
+    padding: 0 $spacing--50 0 $spacing--10;
+  }
+
+  &__title {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+
+    svg {
+      margin: 0 $spacing--10;
+    }
+  }
+
+  &__header-secondary {
+    display: none;
+
+    @media #{$media-screen-sm-min}{
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+    }
+
+    div {
+      flex: 1 0;
+
+      &:last-child {
+        display: inline-block;
+        text-align: right;
+      }
+    }
+  }
+}

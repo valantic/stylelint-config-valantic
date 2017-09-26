@@ -1,0 +1,28 @@
+.c-order-summary {
+  border: 1px solid $color-gray-1;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding: $spacing--20;
+  background-color: $color-white;
+  position: relative;
+
+  &__order-number {
+    font-family: $font-family-light;
+    font-size: $font-size-24;
+    color: $color-orange;
+  }
+
+  &__delivery,
+  &__payment {
+    margin-top: $spacing--20;
+    color: $color-gray-3;
+  }
+
+  &__totals {
+    margin-top: $spacing--50;
+    position: absolute;
+    bottom: $spacing--20;
+    width: 93%;
+  }
+}

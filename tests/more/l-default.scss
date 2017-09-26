@@ -1,0 +1,32 @@
+.l-default {
+  // background: linear-gradient($color-unused-4, $color-white);
+  display: block;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+}
+
+a,
+a:hover {
+  font-size: $font-size-20;
+  color: $color-gray-2;
+}
+
+a.active,
+a:active {
+  color: $color-orange;
+}
+
+a.orange,
+a.orange:hover {
+  color: $color-orange;
+}
+
+.container {
+  @media (max-width: $screen-sm-min) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

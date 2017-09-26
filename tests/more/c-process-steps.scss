@@ -1,0 +1,77 @@
+$c-process-steps-font-size: $font-size-18;
+$c-process-steps-font-size--large: $font-size-30;
+$c-process-steps-step-size: 30px;
+$c-process-steps-step-size--large: 50px;
+
+.c-process-steps {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__step {
+    color: $color-gray-3;
+    text-decoration: none;
+    outline: 0;
+    width:100%;
+    height:100%;
+    line-height: $c-process-steps-step-size;
+    font-size: $c-process-steps-font-size;
+
+    &:hover{
+      font-size: $c-process-steps-font-size;
+    }
+
+    @media #{$media-sm-min} {
+      line-height: $c-process-steps-step-size--large;
+    }
+  }
+
+  &__seperator-item {
+    margin: 0;
+    flex-grow: 1;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      background-color: $color-gray-3;
+      top: 50%;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__item {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-gray-2;
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: $c-process-steps-step-size;
+    height: $c-process-steps-step-size;
+
+    @media #{$media-sm-min} {
+      font-size: $c-process-steps-font-size--large;
+      width: $c-process-steps-step-size--large;
+      height: $c-process-steps-step-size--large;
+    }
+
+    &.is-selected {
+      border-color: $color-orange;
+      .c-process-steps__step {
+        color: $color-orange;
+      }
+    }
+
+  }
+
+}

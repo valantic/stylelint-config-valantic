@@ -1,0 +1,25 @@
+.c-main-search-data {
+  position: absolute;
+  left: 80px;
+  right: 15px;
+  top: 125px;
+  z-index: $z-index-stack-30;
+  display: block;
+
+  @media #{$media-sm-min} {
+    position: relative;
+    margin-left: $spacing--15;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 450px;
+  }
+
+  @media #{$media-md-min} {
+    width: 500px;
+  }
+
+  @media #{$media-lg-min} {
+    width: 600px;
+  }
+}

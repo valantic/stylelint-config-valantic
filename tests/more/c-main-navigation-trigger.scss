@@ -1,0 +1,14 @@
+.c-main-navigation-trigger {
+  position: absolute;
+  left: 15px;
+  top: 125px;
+  z-index: $z-index-stack-30;
+  display: block;
+  height: 50px;
+  width: 50px;
+  @media #{$media-sm-min} {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+}

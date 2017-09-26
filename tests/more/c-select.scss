@@ -1,0 +1,25 @@
+.c-select--horizontal {
+  font-size: 0;
+
+  .e-label--leading {
+    display: block;
+    margin-right: $spacing--0;
+    font-size: $font-size-base;
+
+    @media #{$media-screen-xs-min} {
+      display: inline-block;
+      width: 40%;
+    }
+  }
+
+  .e-select--layout-horizontal {
+    display: block;
+    font-size: $font-size-base;
+    width: 100%;
+
+    @media #{$media-screen-xs-min} {
+      display: inline-block;
+      width: 60%;
+    }
+  }
+}

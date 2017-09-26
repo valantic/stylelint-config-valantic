@@ -1,0 +1,23 @@
+.c-main-search-box {
+  position: relative;
+  height: 60px;
+  overflow: visible;
+
+  .e-input-text {
+    margin: 0 auto;
+    display: block;
+
+    // @media #{$media-md-min} {
+    //   width: 80%;
+    // }
+    //
+    // @media #{$media-md-min} {
+    //   width: 66%;
+    // }
+    //
+    // @media #{$media-lg-min} {
+    //   width: 50%;
+    // }
+
+  }
+}

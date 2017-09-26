@@ -1,0 +1,44 @@
+// BEGIN-FREESTYLE-USAGE color
+
+//COLOR NAMES ARE ACCORDING TO WITH SFS'S INTERNAL CI/CD STYLEGUIDE
+
+//PRIMARY
+$color-orange: #ee7f00;
+$color-red: #e53d1e;
+
+//SECONDARY
+$color-green-3: #b6d8ad;
+$color-green-services: #009284;
+
+//GREYSCALES
+$color-gray: #f7f8f8;
+$color-gray-1: #e0e5e3;
+$color-gray-2: #a1b1ab;
+$color-gray-3: #687682;
+$color-gray-4: #fcfcfc;
+
+$color-white: #fff;
+$color-white-transparent: rgba(255, 255, 255, 0.85);
+
+//GRADIENTS
+$color-gradient-dark: linear-gradient(to bottom, #687682 0%,#3a4853 100%);
+$color-gradient-bright: linear-gradient(to bottom, #e0e5e3 0%,#c6d0cc 100%);
+
+
+//UNUSED COLORS, SHOULD BE REPLACED IN STYLING
+$color-unused-1: #ee66a1;
+$color-unused-2: #ee66a2;
+$color-unused-3: #ee66a3;
+$color-unused-4: #ee66a4;
+$color-unused-5: #ee66a5;
+$color-unused-6: #ee66a6;
+$color-unused-7: #ee66a7;
+$color-unused-9: #ee66a9;
+
+.color-orange {
+  color: $color-orange;
+}
+.color-red {
+  color: $color-red;
+}
+// END-FREESTYLE-USAGE

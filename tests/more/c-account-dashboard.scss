@@ -1,0 +1,106 @@
+.c-account-dashboard {
+  &__item__wrapper {
+    width: 100%;
+    float: left;
+    padding: 0 $spacing--15;
+  }
+
+  &__item {
+    text-decoration: none;
+    display: block;
+    border: 1px solid $color-gray-1;
+    border-radius: 5px;
+    margin-bottom: $spacing--65;
+  }
+
+  &__item__icon {
+    height: 140px;
+    padding-top: $spacing--45;
+    background: $color-white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    svg {
+      display: block;
+      margin: auto;
+    }
+  }
+
+  &__item__title,
+  &__item__title:hover {
+    background: $color-gray;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: $font-size-24;
+    line-height: $line-height-29;
+    color: $color-orange;
+    text-align: center;
+    padding: $spacing--15;
+    text-decoration: none;
+    font-family: $font-family-light;
+  }
+}
+@media #{$media-sm-min} {
+  .c-account-dashboard__item__wrapper {
+    width: 50%;
+  }
+}
+@media #{$media-md-min} {
+  .c-main-content__content {
+    .c-account-dashboard__item__wrapper {
+      width: 33%;
+    }
+
+    &.c-main-content__content--main-navigation-open,
+    &.c-main-content__content--mini-cart-open {
+      .c-account-dashboard__item__wrapper {
+        width: 50%;
+      }
+    }
+  }
+}
+@media #{$media-lg-min} {
+  .c-main-content__content {
+    .c-account-dashboard__item__wrapper {
+      width: 25%;
+    }
+
+    &.c-main-content__content--main-navigation-open,
+    &.c-main-content__content--mini-cart-open {
+      .c-account-dashboard__item__wrapper {
+        width: 33%;
+      }
+    }
+  }
+
+  .c-main-content__content {
+    &.c-main-content__content--main-navigation-open.c-main-content__content--mini-cart-open {
+      .c-account-dashboard__item__wrapper {
+        width: 50%;
+      }
+    }
+  }
+}
+@media #{$media-xl-min} {
+  .c-main-content__content {
+    .c-account-dashboard__item__wrapper {
+      width: 25%;
+    }
+
+    &.c-main-content__content--main-navigation-open,
+    &.c-main-content__content--mini-cart-open {
+      .c-account-dashboard__item__wrapper {
+        width: 33%;
+      }
+    }
+  }
+
+  .c-main-content__content {
+    &.c-main-content__content--main-navigation-open.c-main-content__content--mini-cart-open {
+      .c-account-dashboard__item__wrapper {
+        width: 33%;
+      }
+    }
+  }
+
+}

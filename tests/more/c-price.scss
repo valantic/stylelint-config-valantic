@@ -1,0 +1,85 @@
+.c-price {
+  &__inline__product {
+    position: absolute;
+    z-index: $z-index-stack-40;
+    display: block;
+    left: 10px;
+    top: 10px;
+    color: $color-orange;
+    font-size: $font-size-24;
+
+    &--small {
+      font-size: $font-size-18;
+    }
+  }
+
+  &__inline__variable-product {
+    position: absolute;
+    z-index: $z-index-stack-40;
+    display: block;
+    left: 10px;
+    top: 10px;
+    color: $color-gray-3;
+    font-size: $font-size-24;
+  }
+
+  &__complete {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+
+    &__yield {
+      flex: 1;
+      align-self: center;
+      font-size: $font-size-large;
+      text-decoration: underline;
+      color: $color-orange;
+    }
+
+    &__prices {
+      flex: 1;
+    }
+  }
+
+  &__list-price {
+    text-align: right;
+    color: $color-gray-3;
+    font-size: $font-size-30;
+    padding-bottom: $spacing--10;
+  }
+
+  &__your-price {
+    text-align: right;
+    font-size: $font-size-36;
+    color: $color-orange;
+    font-family: $font-family-bold;
+  }
+
+  &__voc {
+    text-align: right;
+    font-size: $font-size-20;
+    padding-bottom: $spacing--10;
+    color: $color-gray-3;
+  }
+
+  &__unit {
+    text-align: right;
+    font-size: $font-size-20;
+    padding-bottom: $spacing--10;
+    color: $color-gray-3;
+  }
+
+  &__tax-info {
+    text-align: right;
+    color: $color-gray-2;
+    font-size: $font-size-20;
+    line-height: $line-height-24;
+    font-family: $font-family-regular;
+  }
+
+  &__volume-prices__wrapper {
+    margin-top: $spacing--30;
+    margin-bottom: $spacing--20;
+    position: relative;
+  }
+}

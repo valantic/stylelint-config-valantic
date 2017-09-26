@@ -1,0 +1,67 @@
+/*!
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// ----------------------------------------------------------------
+// THIS IS A CUSTOMIZED BOOTSTRAP VERSION
+// WE'VE DECIDED TO USE ONLY THE GRID SYSTEM
+// SO SOME THINGS ARE COMMENTED OUT BY '//not used!'
+//-----------------------------------------------------------------
+
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Reset and dependencies
+//not used! @import "bootstrap/normalize";
+//not used! @import "bootstrap/print";
+//not used! @import "bootstrap/glyphicons";
+
+// Core CSS
+//@import "bootstrap/scaffolding";
+//not used! @import "bootstrap/type";
+//not used! @import "bootstrap/code";
+
+//@import "bootstrap/grid";
+//******
+//WE USE A CUSTOM GRID AT ./bootstrap-grid-custom.scss
+//******
+
+//not used! @import "bootstrap/tables";
+//@import "bootstrap/forms";
+//not used! @import "bootstrap/buttons";
+
+// Components
+//not used! @import "bootstrap/component-animations";
+//not used! @import "bootstrap/dropdowns";
+//not used! @import "bootstrap/button-groups";
+//not used! @import "bootstrap/input-groups";
+//not used! @import "bootstrap/navs";
+//not used! @import "bootstrap/navbar";
+//not used! @import "bootstrap/breadcrumbs";
+//not used! @import "bootstrap/pagination";
+//not used! @import "bootstrap/pager";
+//not used! @import "bootstrap/labels";
+//not used! @import "bootstrap/badges";
+//not used! @import "bootstrap/jumbotron";
+//not used! @import "bootstrap/thumbnails";
+//not used! @import "bootstrap/alerts";
+//not used! @import "bootstrap/progress-bars";
+//not used! @import "bootstrap/media";
+//not used! @import "bootstrap/list-group";
+//not used! @import "bootstrap/panels";
+//not used! @import "bootstrap/responsive-embed";
+//not used! @import "bootstrap/wells";
+//not used! @import "bootstrap/close";
+
+// Components w/ JavaScript
+//not used! @import "bootstrap/modals";
+//not used! @import "bootstrap/tooltip";
+//not used! @import "bootstrap/popovers";
+//not used! @import "bootstrap/carousel";
+
+// Utility classes
+//not used! @import "bootstrap/utilities";
+//not used! @import "bootstrap/responsive-utilities";

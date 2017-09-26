@@ -1,0 +1,31 @@
+.c-registration {
+
+  &__form-wrapper {
+    margin-top: $spacing--30;
+
+    @media #{$media-screen-md-min} {
+      width: 60%;
+      margin-left: 20%;
+    }
+  }
+}
+
+.c-main-content__content--mini-cart-open,
+.c-main-content__content--main-navigation-open {
+  .c-registration__form-wrapper {
+    width: 100%;
+    margin-left: 0;
+
+    @media #{$media-screen-lg-min} {
+      width: 80%;
+      margin-left: 10%;
+    }
+  }
+}
+
+.c-main-content__content--mini-cart-open.c-main-content__content--main-navigation-open {
+  .c-registration__form-wrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+}

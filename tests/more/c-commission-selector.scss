@@ -1,0 +1,104 @@
+.c-commission-selector {
+  width: 100%;
+
+  &--is-open {
+    width: 290px;
+
+    @media #{$media-screen-xs-min} {
+      width: 350px;
+    }
+
+    .c-commission-selector {
+
+      &__content {
+        position: absolute;
+        z-index: $z-index-stack-40;
+        width: 100%;
+        min-width: 265px;
+        right: 0;
+      }
+
+      &__spacer {
+        height: 50px;
+      }
+    }
+  }
+
+  &__content {
+    border: 1px solid $color-gray-1;
+    border-radius: $e-form-base-border-radius;
+    background-color: $color-white;
+  }
+  
+  &__content-header {
+    cursor: pointer;
+  }
+
+  &__trigger-btn {
+    float: right;
+    border: 0;
+  }
+
+  &__title {
+    line-height: 48px;
+    margin-bottom: $spacing--15;
+    padding-left: $spacing--15;
+    border-bottom: 1px solid $color-gray-1;
+    user-select: none;
+  }
+
+  &__add-list-container {
+    display: flex;
+  }
+
+  & [name="new-wishlist-name"] {
+    margin: 0 $spacing--15;
+  }
+
+  &__add-list-btn {
+    flex: 1 0 auto;
+    min-width: 48px;
+    margin-right: $spacing--15;
+  }
+
+  &__list-container {
+
+    ul {
+      list-style-type: none;
+      padding-left: $spacing--15;
+      margin: $spacing--15 0;
+      max-height: 350px;
+      overflow-y: auto;
+    }
+
+    li:hover {
+      cursor: pointer;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: $spacing--15;
+    }
+
+    li[data-state="isActive"] {
+      color: $color-orange;
+    }
+  }
+
+  &__dropdown {
+    cursor: pointer;
+    height: 50px;
+    border: 1px solid $color-gray-1;
+    color: $color-gray-3;
+    line-height: 50px;
+    padding-left: 15px;
+    padding-right: 40px;
+    border-radius: $e-form-base-border-radius;
+    background: url('./svg/inline/i-arrow--down.svg') no-repeat right 0.5em center;
+  }
+
+  &__dropdown-text {
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

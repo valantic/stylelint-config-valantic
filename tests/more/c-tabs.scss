@@ -1,0 +1,80 @@
+.c-tabs {
+  background: $color-white;
+
+  .ivy-tabs-tabpanel {
+    display: none;
+    // max-height: 245px;
+    overflow: auto;
+    background: $color-gray-4;
+    padding: 20px;
+  }
+
+  .ivy-tabs-tabpanel.active {
+    display: block;
+  }
+
+  .ivy-tabs-tablist {
+    ul {
+      list-style-type: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+      flex-direction: column;
+      @media #{$media-md-min} {
+        flex-direction: row;
+      }
+    }
+
+    li {
+      text-align: left;
+      width: 100%;
+      @media #{$media-md-min} {
+        flex: 1;
+
+        &:first-child {
+          margin-left: 0;
+
+          a {
+            border-left: none;
+          }
+        }
+      }
+
+      a {
+        border-left: 3px solid $color-gray;
+        border-bottom: 3px solid $color-gray;
+        font-family: $font-family-light;
+        font-size: $font-size-24;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        width: 100%;
+        color: $color-orange;
+        outline: none;
+
+        &:hover {
+          font-family: $font-family-light;
+          font-size: $font-size-24;
+          text-decoration: none;
+          display: block;
+          padding: 10px;
+          width: 100%;
+          color: $color-orange;
+          outline: none;
+        }
+      }
+
+      .active {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &--dark {
+    background: $color-gray-1;
+
+    .ivy-tabs-tabpanel {
+      background: $color-gray-1;
+    }
+  }
+}

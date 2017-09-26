@@ -1,0 +1,58 @@
+// ZURICH LIGHT
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=a9f60cb3-adad-48dd-8dcc-64c40f0c7bfe&fontids=1121573,1121579,1121604");
+
+@font-face{
+  font-family:"Zurich W01 Light";
+  src:url("fonts/1121573/7cd10657-dde6-46f5-be14-dfb6aa9ed34e.eot?#iefix");
+  src:url("fonts/1121573/7cd10657-dde6-46f5-be14-dfb6aa9ed34e.eot?#iefix") format("eot"),url("fonts/1121573/520c32e4-e90f-47cc-83d3-692db5fd03af.woff2") format("woff2"),url("fonts/1121573/d35f558c-9cf6-4493-8a96-fb7267ea63f4.woff") format("woff"),url("fonts/1121573/db6413e7-fff8-4409-8b5b-09f9ac96ce29.ttf") format("truetype");
+}
+
+// ZURICH CONDENSED
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=ff69767e-8dd0-40d5-8f21-6bd3ec225e72&fontids=1121598");
+
+@font-face{
+  font-family:"Zurich W01 Condensed";
+  src:url("fonts/1121598/ab3afc61-0dcd-4cec-8e59-dd5d0865473f.eot?#iefix");
+  src:url("fonts/1121598/ab3afc61-0dcd-4cec-8e59-dd5d0865473f.eot?#iefix") format("eot"),url("fonts/1121598/258c4607-9bd9-425d-965f-811f37b5aab9.woff2") format("woff2"),url("fonts/1121598/cea21312-600e-4b75-9175-aa53f6248ac1.woff") format("woff"),url("fonts/1121598/493b5aca-2265-4abe-8da7-e0f2aaaf4d18.ttf") format("truetype");
+}
+
+@font-face{
+  font-family:"ZurichW01-CondensedBold1121604";
+  src:url("fonts/1121604/87b3af47-8cf2-48fb-9834-adba57807c29.eot?#iefix");
+  src:url("fonts/1121604/87b3af47-8cf2-48fb-9834-adba57807c29.eot?#iefix") format("eot"),url("fonts/1121604/14500e78-2bc1-450b-8280-9c5422f2d9fd.woff2") format("woff2"),url("fonts/1121604/579c8f16-4492-4d7b-896d-744a68168c54.woff") format("woff"),url("fonts/1121604/c71720a1-8f0c-48bc-9af1-f910ee87c4c0.ttf") format("truetype");
+}
+
+$font-family-light: 'Zurich W01 Light';
+$font-family-regular: 'Zurich W01 Condensed';
+$font-family-bold: 'ZurichW01-CondensedBold1121604';
+
+$font-size-small: 14px;
+$font-size-base: 16px;
+$font-size-large: 18px;
+
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-22: 22px;
+$font-size-24: 24px;
+$font-size-30: 30px;
+$font-size-36: 36px;
+$font-size-36: 36px;
+$line-height-16: 16px;
+$line-height-19: 19px;
+$line-height-21: 21px;
+$line-height-24: 24px;
+$line-height-29: 29px;
+$line-height-32: 32px;
+$line-height-36: 36px;
+$line-height-43: 43px;
+$line-height-50: 50px;
+$line-height-55: 55px;
+$line-height-60: 60px;
+
+html {
+  font-family: $font-family-regular;
+  font-size: $font-size-20;
+  color: $color-gray-2;
+}

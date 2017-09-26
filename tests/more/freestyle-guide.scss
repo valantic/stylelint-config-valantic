@@ -1,0 +1,37 @@
+$FreestyleUsage-maxWidth: 100%;
+
+.FreestyleGuide {
+  background: $color-gray-4;
+
+  .FreestyleGuide-content {
+    max-width: 100%;
+    overflow: auto;
+
+  }
+
+  .FreestyleMenu a {
+    font-size: 14px;
+  }
+}
+
+div.FreestyleUsage-title {
+  color: $color-orange;
+  font-weight: normal;
+}
+
+div.FreestyleUsage-rendered {
+  position: relative;
+  min-height: 70px;
+}
+
+div.FreestyleGuide.ember-view {
+  min-width: initial;
+}
+
+.FreestyleGuide > main.FreestyleGuide-body {
+  background-color: transparent;
+}
+
+body.route--styleguide {
+  background-color: $color-white;
+}

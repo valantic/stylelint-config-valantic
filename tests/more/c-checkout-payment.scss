@@ -1,0 +1,55 @@
+.c-checkout-payment {
+  &__heading {
+    color: $color-orange;
+    font-size: $font-size-24;
+    font-family: $font-family-light;
+    font-weight: $font-weight-regular;
+  }
+}
+
+.checkout_payment__steps, .checkout-payment__options {
+  width: 90%;
+  margin: auto;
+}
+
+.checkout-payment__order-total {
+  width: 100%;
+}
+
+@media #{$media-screen-sm-min} {
+  .checkout-payment__order-total {
+    width: 60%;
+    float: right;
+  }
+}
+
+@media #{$media-screen-md-min} {
+  .c-main-content__content--main-navigation-open > .c-checkout-payment > .row > .checkout_payment__steps,
+  .c-main-content__content--main-navigation-open > .c-checkout-payment > .row > .checkout-payment__options {
+    width: 95%;
+    margin-left: 5%;
+  }
+
+  .checkout-payment__order-total {
+    width: 50%;
+    float: right;
+  }
+
+  .checkout_payment__steps, .checkout-payment__options {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media #{$media-screen-lg-min} {
+  .c-main-content__content--main-navigation-open > .c-checkout-payment > .row > .checkout_payment__steps,
+  .c-main-content__content--main-navigation-open > .c-checkout-payment > .row > .checkout-payment__options {
+    max-width: 570px;
+    margin: auto;
+  }
+
+  .checkout_payment__steps, .checkout-payment__options {
+    max-width: 570px;
+    margin: auto;
+  }
+}

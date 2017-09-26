@@ -1,0 +1,34 @@
+.c-commissions {
+
+  &__wrapper {
+    border: 1px solid $color-gray-1;
+    border-radius: $e-form-base-border-radius;
+    background-color: $color-white;
+  }
+
+  &__header {
+    display: flex;
+    padding: $spacing--10;
+
+    @media #{$media-screen-sm-min} {
+      padding-left: $spacing--30;
+    }
+  }
+
+  &__title {
+    flex: 1 0 auto;
+    color: $color-orange;
+    line-height: 50px;
+
+    .e-heading {
+      margin: 0;
+    }
+  }
+
+  &__icons {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+  }
+}

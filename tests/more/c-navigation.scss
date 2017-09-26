@@ -1,0 +1,105 @@
+.c-navigation {
+  font-size: $font-size-24;
+  line-height: $line-height-29;
+  // max-width: 500px;
+  font-family: $font-family-regular;
+  display: block;
+
+  &__childs {
+    transition: max-height 0.5s linear;
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  &__back-entry-top {
+    color: white;
+    background: $color-gray-3;
+    padding: $spacing--10 $spacing--20;
+    font-family: $font-family-light;
+    border-bottom: 1px solid $color-white;
+    display: flex;
+
+    &__text {
+      flex: 9;
+    }
+
+    &__icon {
+      flex: 1;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__back-entry {
+    color: white;
+    background: $color-gray-3;
+    padding: $spacing--10 $spacing--20;
+    font-family: $font-family-light;
+    border-bottom: 1px solid $color-white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__entry {
+    font-size: $font-size-18;
+    padding: $spacing--10 $spacing--20;
+    color: $color-gray-3;
+    background: $color-gray-1;
+    border-bottom: 1px solid $color-white;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-orange;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: $font-size-18;
+    }
+  }
+
+  &__top-entry--active {
+    background: $color-gray-2;
+    color: $color-white;
+
+    &:hover {
+      color: $color-white;
+      cursor: default;
+    }
+
+  }
+
+  &__entry {
+    padding: $spacing--10 $spacing--20;
+
+  }
+
+  &__entry--active,
+  &__entry-active:hover {
+    background: $color-orange;
+    color: $color-white!important;
+    cursor: default !important;
+  }
+
+  &__entry__icon {
+    float: right;
+    margin-top: 5px;
+    height: 20px;
+    width: 20px;
+    transform: rotate(90deg);
+    transition: transform 0.5s linear;
+    pointer-events: none;
+
+    * {
+      fill: $color-white;
+      pointer-events: none;
+    }
+  }
+
+  &__entry__icon--open {
+    transform: rotate(270deg);
+  }
+}

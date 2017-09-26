@@ -1,0 +1,40 @@
+.c-notification {
+  position: relative;
+  padding: $spacing--15;
+  color: $color-white;
+
+  &__close {
+    position: absolute;
+    right: $spacing--10;
+    top: $spacing--5;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    text-align: right;
+
+    svg {
+      color: $color-white!important;
+      max-width: 100%;
+
+      * {
+        fill: $color-white !important;
+      }
+    }
+  }
+
+  &--error {
+    background: $color-red;
+  }
+
+  &--info {
+    background: $color-gray-2;
+  }
+
+  &--success {
+    background: $color-green-3;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

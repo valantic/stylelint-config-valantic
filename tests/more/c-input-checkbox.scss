@@ -1,0 +1,80 @@
+.c-input-checkbox__options {
+
+  ::selection{
+    background:transparent;
+  }
+
+  &--horizontal,
+  &--nested {
+    display: block;
+    vertical-align: middle;
+
+    .e-label {
+      display: block;
+      margin-right: $spacing--0;
+      margin-bottom: $spacing--10;
+    }
+
+    .e-label:last-child {
+      margin: $spacing--0;
+    }
+  }
+
+  &--horizontal {
+
+    @media #{$media-screen-xs-min} {
+      display: inline-block;
+    }
+
+    .e-label {
+
+      @media #{$media-screen-xs-min} {
+        display: inline-block;
+        margin-right: $spacing--15;
+        margin-bottom: 4px;
+        margin-top: 4px;
+      }
+    }
+
+    .e-label--label-up {
+      display: inline-block;
+    }
+
+    .e-label--label-up:last-child {
+      margin-right: $spacing--0;
+    }
+  }
+
+  &--nested {
+
+    @media #{$media-screen-xs-min} {
+      display: inline-block;
+      margin-bottom: -$spacing--10;
+    }
+
+    .e-label {
+      @media #{$media-screen-xs-min} {
+        display: inline-block;
+        margin-bottom: $spacing--10;
+        margin-right: $spacing--15;
+      }
+    }
+
+    .e-label:last-child {
+      @media #{$media-screen-xs-min} {
+        margin-bottom: $spacing--10;
+      }
+    }
+  }
+
+  &--vertical {
+    .e-label {
+      display: block;
+      margin-bottom: $spacing--10;
+    }
+
+    .e-label:last-child {
+      margin-bottom: $spacing--0;
+    }
+  }
+}

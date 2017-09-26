@@ -1,0 +1,22 @@
+.c-address-management {
+  
+  &__profile-address {
+    margin-bottom: $spacing--30;
+
+    @media #{$media-screen-md-min} {
+      display: flex;
+    }
+  }
+
+  &__profile-address-left {
+    flex: 1 0 auto;
+
+    @media #{$media-screen-md-min} {
+      margin-right: $spacing--30;
+    }
+  }
+
+  &__profile-address-right {
+    flex: 1 0 auto;
+  }
+}

@@ -1,0 +1,90 @@
+$e-input-radio-border: 3px solid $color-white;
+$e-input-radio-size: 1.25em;
+$e-input-radio-border-circle: 2px;
+$e-input-radio-border-button-style: 1.5px;
+$e-input-radio-shadow-light: 0 0 0 1px $color-gray-2;
+$e-input-radio-shadow-dark: 0 0 0 2px $color-orange;
+
+.e-input-radio {
+  @include e-form-base;
+  display: none;
+
+  &--state-default:checked + .e-input-radio__fake-radio {
+    background: $color-orange;
+  }
+
+  &--state-success:checked + .e-input-radio__fake-radio {
+    background: $color-green-3;
+  }
+
+  &--state-warning:checked + .e-input-radio__fake-radio {
+    background: $color-orange;
+  }
+
+  &--state-error:checked + .e-input-radio__fake-radio {
+    background: $color-red;
+  }
+
+  &[disabled] + .e-input-radio__fake-radio {
+    cursor: default;
+  }
+
+  &[disabled]:checked + .e-input-radio__fake-radio {
+    background: $color-gray-1;
+  }
+}
+
+.e-input-radio__fake-radio {
+  box-shadow: $e-input-radio-shadow-light;
+  position: relative;
+  content: '';
+  vertical-align: middle;
+  border-radius: $e-input-radio-border-circle;
+  border: $e-input-radio-border;
+  background: $color-white;
+  display: inline-block;
+  width: $e-input-radio-size;
+  height: $e-input-radio-size;
+  cursor: pointer;
+  margin: 1px; // make room for the box shadow so it doesnt overflow
+}
+
+// ---------------------------------------------------
+// Special Styling for Radios who look like buttons
+// ---------------------------------------------------
+.e-input-radio__fake-radio--noinput {
+  box-shadow: $e-input-radio-shadow-dark;
+  border: 0;
+  border-radius: $e-input-radio-border-button-style;
+  color: $color-orange;
+  min-width: 7em;
+  height: 2em;
+  text-align: center;
+  padding: 0.5em;
+  margin-right: $spacing--0;
+  width: 100%;
+  @media #{$media-screen-xs-min} {
+    width: auto;
+  }
+}
+
+.e-input-radio__fake-radio--noinput.e-input-radio__fake-radio--grid {
+  min-width: 0;
+  width: 100%;
+}
+
+.e-input-radio:checked + .e-input-radio__fake-radio--noinput {
+  background: $color-orange;
+  color: $color-white;
+}
+
+.e-input-radio[disabled] + .e-input-radio__fake-radio--noinput {
+  box-shadow: $e-input-radio-shadow-light;
+  color: $color-orange;
+  cursor: default;
+}
+
+.e-input-radio[disabled]:checked + .e-input-radio__fake-radio--noinput {
+  background: $color-orange;
+  color: $color-white;
+}

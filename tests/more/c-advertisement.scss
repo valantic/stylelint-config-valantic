@@ -1,0 +1,141 @@
+.c-advertisement {
+  display: block;
+  min-height: 200px;
+  cursor: pointer;
+
+  &.c-advertisement--no-link {
+    cursor: default;
+
+    .c-advertisement__content__headline,
+    .c-advertisement__content__text,
+    .c-advertisement__image {
+      cursor: default;
+    }
+
+  }
+
+  &__image {
+    img {
+      width: 100%;
+    }
+
+    &--rounded {
+      border-radius: 5px;
+      overflow: hidden;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: $spacing--30;
+    left: $spacing--30;
+  }
+
+  &__content__headline {
+    font-size: $font-size-18;
+    line-height: $line-height-21;
+    font-family: $font-family-light;
+    cursor: pointer;
+    pointer-events: none;
+  }
+
+  &__content__text {
+    font-family: $font-family-light;
+    margin-top: $spacing--10;
+    font-size: $font-size-small;
+    line-height: $line-height-16;
+    cursor: pointer;
+    pointer-events: none;
+  }
+
+  &--white {
+    color: $color-white;
+    background: none;
+    border-color: $color-white;
+  }
+
+  &--white {
+    color: $color-white;
+    background: none;
+    border-color: $color-white;
+  }
+
+  &--grey1 {
+    color: $color-gray-1;
+    background: none;
+    border-color: $color-gray-1;
+  }
+
+  &--grey2 {
+    color: $color-gray-2;
+    background: none;
+    border-color: $color-gray-2;
+  }
+
+  &--grey3 {
+    color: $color-gray-3;
+    background: none;
+    border-color: $color-gray-3;
+  }
+
+  &--grey4 {
+    color: #3a4853;
+    background: none;
+    border-color: #3a4853;
+  }
+
+  &--blue1 {
+    color: #eaf6fc;
+    background: none;
+    border-color: #eaf6fc;
+  }
+
+  &--blue2 {
+    color: #d5edfa;
+    background: none;
+    border-color: #d5edfa;
+  }
+
+  &--blue3 {
+    color: #b0dff5;
+    background: none;
+    border-color: #b0dff5;
+  }
+
+  &--green1 {
+    color: #ecf4e8;
+    background: none;
+    border-color: #ecf4e8;
+  }
+
+  &--green2 {
+    color: #d8e9cf;
+    background: none;
+    border-color: #d8e9cf;
+  }
+
+  &--green2 {
+    color: #b6d8ad;
+    background: none;
+    border-color: #b6d8ad;
+  }
+
+  &--yellow1 {
+    color: #ffe9bf;
+    background: none;
+    border-color: #ffe9bf;
+  }
+
+  &--yellow2 {
+    color: #ffdb87;
+    background: none;
+    border-color: #ffdb87;
+  }
+
+  &--yellow3 {
+    color: #fdcb43;
+    background: none;
+    border-color: #fdcb43;
+  }
+
+}

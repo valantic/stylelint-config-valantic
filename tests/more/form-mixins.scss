@@ -1,0 +1,25 @@
+$e-form-base-border-radius: 0.15em;
+@mixin e-form-base($padding: 0 15px) {
+  border: 1px solid $color-gray-1;
+  border-radius: $e-form-base-border-radius;
+  box-sizing: border-box;
+  color: $color-gray-3;
+  padding: $padding;
+  vertical-align: middle;
+  font-size: $font-size-20;
+  font-family: $font-family-regular;
+  background-color: transparent;
+  height: 2.5em;
+  line-height: 2.5em;
+
+  &.focus,
+  &:focus {
+    outline: 0;
+  }
+
+  &[disabled] {
+    color: $color-gray-1;
+    cursor: default;
+  }
+
+}

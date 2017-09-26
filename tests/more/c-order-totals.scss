@@ -1,0 +1,41 @@
+.c-order-totals {
+  &__additional-price, &__total-price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__total-price {
+    color: $color-orange;
+    font-family: $font-family-bold;
+    font-size: $font-size-36;
+  }
+
+  &__additional-price {
+    margin-bottom: $spacing--10;
+    color: $color-gray-3;
+  }
+
+  &__sub-total {
+    margin-bottom: $spacing--30;
+  }
+
+  &__taxinfo {
+    text-align: right;
+    font-size: $font-size-18;
+    color: $color-gray-2;
+  }
+
+  &__proceed {
+    margin-top: $spacing--30;
+    position: relative;
+
+    .c-order-totals__proceed__error-trigger {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: $z-index-stack-70;
+    }
+  }
+}

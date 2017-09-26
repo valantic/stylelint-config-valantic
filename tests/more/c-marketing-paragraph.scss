@@ -1,0 +1,61 @@
+.c-marketing-paragraph {
+  flex: 1;
+  padding: 0;
+  flex-direction: column;
+  height: 100%;
+
+  &--bordered {
+    border: 1px solid $color-gray-1;
+    background: $color-white;
+    border-radius: 5px;
+  }
+
+  &__image {
+    flex: 1;
+
+    img {
+      width: 100%;
+    }
+
+    &--rounded {
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    padding: $spacing--15;
+  }
+
+  &__content__headline {
+    font-size: $font-size-24;
+    line-height: $line-height-29;
+    font-family: $font-family-light;
+    color: $color-orange;
+  }
+
+  &__content-link {
+    text-decoration: none;
+  }
+
+  &__content__text {
+    font-family: $font-family-light;
+    margin-top: $spacing--15;
+    color: $color-gray-3;
+    font-size: $font-size-18;
+    line-height: $line-height-24;
+  }
+
+  &__image-radius-left {
+    img {
+      border-radius: 3px 0 0 3px;
+    }
+  }
+
+  &__image-radius-right {
+    img {
+      border-radius: 0 3px 3px 0;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.c-service-navigation-mobile {
+  display: flex;
+  margin: $spacing--15;
+
+  @media #{$media-md-min} {
+    display: none;
+  }
+
+  &__item {
+    margin-right: 10px;
+
+    // height: 50px;
+    // width: 50px;
+    // border: 1px solid $color-gray-1;
+    display: block;
+    float: left;
+
+    &.active,
+    &:active {
+      border-color: $color-orange;
+    }
+
+    &__language,
+    &__storefinder {
+      @media #{$media-sm-min} {
+        display: none;
+      }
+    }
+  }
+}

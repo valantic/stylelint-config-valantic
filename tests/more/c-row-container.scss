@@ -1,0 +1,16 @@
+.c-row-container {
+  .col-sm-6:first-child {
+    margin-bottom: $spacing--30;
+  }
+  @media #{$media-sm-min} {
+    display: flex;
+
+    .col-sm-6 {
+      &:first-child {
+        margin-bottom: 0;
+      }
+      flex: 1;
+      max-width: 50%;
+    }
+  }
+}

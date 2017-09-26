@@ -1,0 +1,55 @@
+.c-wishlists {
+
+  &__header {
+    display: flex;
+    margin-bottom: $spacing--30;
+
+    select {
+      margin-right: $spacing--30;
+    }
+  }
+
+  &__header-left {
+    flex: 1 0 auto;
+  }
+
+  &__item {
+    margin-bottom: $spacing--30;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title-container {
+    margin-bottom: $spacing--30;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: $color-white;
+    border: 1px solid $color-gray-1;
+    border-radius: $e-form-base-border-radius;
+    color: $color-gray-3;
+    padding: 15px;
+    padding-right: 120px;
+    flex-wrap: wrap;
+    height: 60px;
+  }
+
+  &__title-item {
+    display: inline-block;
+    margin-right: $spacing--15;
+  }
+
+  &__name {
+    display: flex;
+    cursor: pointer;
+    flex: 1 0;
+  }
+
+  &__date {
+    display: flex;
+    cursor: pointer;
+    flex: 1 0;
+  }
+}

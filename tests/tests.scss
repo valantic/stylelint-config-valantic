@@ -1,0 +1,89 @@
+
+.tests { // This line should give error about invalid class
+  color: red; // This line should give error about named color
+}
+
+.c-block__element__element { // This line should give error about invalid class
+  color: #000; // This line should give error about short color definitions
+}
+
+.c-block__element--modifier--modifier { // This line should give error about invalid class
+  color: #000000;
+}
+
+.c-blockElement { // This line should give error about invalid class
+  color: #000000;
+}
+
+.c-block {
+  &__element {
+    &--modifier {
+      &:hover {
+        &::before { // This line should give error about nesting depth
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
+#c-block { // This line should give error about id selector
+  color: #000000;
+}
+
+.c-block {
+  color: #000000 !important; // This line should give error about important
+}
+
+.c-block {
+  color: #000000; background-color: #000000; // This line should give error about multiple properties on one line
+}
+
+
+
+
+// This line above should give error because of to many lines
+.c-block {
+  color: #000000;
+}
+
+.c-block, .c-block { // This line should give error about multiple selectors on one line
+  color: #000000;
+}
+
+.c-block {
+  &:before { // This line should give error about invalid pseudo selector (::)
+    color: #000000;
+  }
+}
+
+// Valid BEM classes
+.c-block {
+  &:hover {
+    color: #000000;
+  }
+
+  &__element {
+    color: #000000;
+
+    &:hover {
+      color: #000000;
+    }
+
+    &--modifier {
+      color: #000000;
+
+      &:hover {
+        color: #000000;
+      }
+    }
+  }
+
+  &__element--modifier {
+    color: #000000;
+
+    &:hover {
+      color: #000000;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.c-profile-data {
+  height: 100%;
+  margin-bottom: $spacing--30;
+
+  @media #{$media-screen-md-min} {
+    margin-bottom: 0;
+  }
+
+  &__wrapper {
+    border: 1px solid $color-gray-1;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  &__header {
+    font-family: $font-family-light;
+    font-size: $font-size-24;
+    background-color: $color-white;
+    color: $color-orange;
+    padding: $spacing--5 $spacing--5 $spacing--5 $spacing--20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+  }
+
+  &__body {
+    background-color: $color-gray-4;
+    color: $color-gray-3;
+    line-height: 1.4;
+    padding: 0 $spacing--20 $spacing--20 $spacing--20;
+    height: 100%;
+  }
+
+  &__input {
+    line-height: 1.4em;
+    height: 1.4em;
+    border: none;
+    color: $color-gray-3 !important;
+  }
+
+  &__button__icon {
+    width: 30px;
+    height: 20px;
+  }
+
+  &__address-line {
+    margin-bottom: $spacing--10;
+  }
+
+  .e-input-text {
+    margin-bottom: $spacing--10;
+  }
+}

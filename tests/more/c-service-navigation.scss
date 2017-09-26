@@ -1,0 +1,25 @@
+.c-service-navigation {
+  display: none;
+
+  @media #{$media-md-min} {
+    display: inline-block;
+  }
+
+  &__item {
+    margin-left: 12px;
+
+    // height: 50px;
+    // width: 50px;
+    // border: 1px solid $color-gray-1;
+    display: inline-block;
+
+    svg|title {
+      pointer-events: none;
+    }
+
+    &.active,
+    &:active {
+      border-color: $color-orange;
+    }
+  }
+}

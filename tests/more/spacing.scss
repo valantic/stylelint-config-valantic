@@ -1,0 +1,212 @@
+// -------------------------------------------------
+// Contains style definitions for component
+// spacing
+// -------------------------------------------------
+@mixin spacing-mixin-bottom() {
+  &-0 { margin-bottom: $spacing--0; }
+  &-5 { margin-bottom: $spacing--5; }
+  &-10 { margin-bottom: $spacing--10; }
+  &-15 { margin-bottom: $spacing--15; }
+  &-20 { margin-bottom: $spacing--20; }
+  &-30 { margin-bottom: $spacing--30; }
+  &-40 { margin-bottom: $spacing--40; }
+  &-50 { margin-bottom: $spacing--50; }
+  &-60 { margin-bottom: $spacing--60; }
+  &-70 { margin-bottom: $spacing--70; }
+  &-80 { margin-bottom: $spacing--80; }
+  &-90 { margin-bottom: $spacing--90; }
+  &-100 { margin-bottom: $spacing--100; }
+}
+
+@mixin spacing-mixin-top() {
+  &-0 { margin-top: $spacing--0; }
+  &-5 { margin-top: $spacing--5; }
+  &-10 { margin-top: $spacing--10; }
+  &-15 { margin-top: $spacing--15; }
+  &-20 { margin-top: $spacing--20; }
+  &-30 { margin-top: $spacing--30; }
+  &-40 { margin-top: $spacing--40; }
+  &-50 { margin-top: $spacing--50; }
+  &-60 { margin-top: $spacing--60; }
+  &-70 { margin-top: $spacing--70; }
+  &-80 { margin-top: $spacing--80; }
+  &-90 { margin-top: $spacing--90; }
+  &-100 { margin-top: $spacing--100; }
+}
+@mixin spacing-mixin-left() {
+  &-0 { margin-left: $spacing--0; }
+  &-5 { margin-left: $spacing--5; }
+  &-10 { margin-left: $spacing--10; }
+  &-15 { margin-left: $spacing--15; }
+  &-20 { margin-left: $spacing--20; }
+  &-30 { margin-left: $spacing--30; }
+  &-40 { margin-left: $spacing--40; }
+  &-50 { margin-left: $spacing--50; }
+  &-60 { margin-left: $spacing--60; }
+  &-70 { margin-left: $spacing--70; }
+  &-80 { margin-left: $spacing--80; }
+  &-90 { margin-left: $spacing--90; }
+  &-100 { margin-left: $spacing--100; }
+}
+@mixin spacing-mixin-right() {
+  &-0 { margin-right: $spacing--0; }
+  &-5 { margin-right: $spacing--5; }
+  &-10 { margin-right: $spacing--10; }
+  &-15 { margin-right: $spacing--15; }
+  &-20 { margin-right: $spacing--20; }
+  &-30 { margin-right: $spacing--30; }
+  &-40 { margin-right: $spacing--40; }
+  &-50 { margin-right: $spacing--50; }
+  &-60 { margin-right: $spacing--60; }
+  &-70 { margin-right: $spacing--70; }
+  &-80 { margin-right: $spacing--80; }
+  &-90 { margin-right: $spacing--90; }
+  &-100 { margin-right: $spacing--100; }
+}
+
+.spacing {
+
+  &--bottom {
+    @include spacing-mixin-bottom();
+  }
+
+  &--top {
+    @include spacing-mixin-top();
+  }
+
+  &--left {
+    @include spacing-mixin-left();
+  }
+
+  &--right {
+    @include spacing-mixin-right();
+  }
+
+
+
+  // -------------------------------------------------
+  // SPACING FOR MEDIA QUERIES "ONLY"
+  // -------------------------------------------------
+  @media #{$media-screen-xxs-only} {
+    &--bottom-xxs-only {
+      @include spacing-mixin-bottom();
+    }
+
+    &--top-xxs-only {
+      @include spacing-mixin-top();
+    }
+  }
+
+  @media #{$media-screen-xs-only} {
+    &--bottom-xs-only {
+      @include spacing-mixin-bottom();
+    }
+
+    &--top-xs-only {
+      @include spacing-mixin-top();
+    }
+  }
+
+  @media #{$media-screen-sm-only} {
+    &--bottom-sm-only {
+      @include spacing-mixin-bottom();
+    }
+
+    &--top-sm-only {
+      @include spacing-mixin-top();
+    }
+  }
+
+  @media #{$media-screen-md-only} {
+    &--bottom-md-only {
+      @include spacing-mixin-bottom();
+    }
+
+    &--top-md-only {
+      @include spacing-mixin-top();
+    }
+  }
+
+  @media #{$media-screen-lg-only} {
+    &--bottom-lg-only {
+      @include spacing-mixin-bottom();
+    }
+
+    &--top-lg-only {
+      @include spacing-mixin-top();
+    }
+  }
+
+  @media #{$media-screen-xl-only} {
+    &--bottom-xl-only {
+      @include spacing-mixin-bottom();
+    }
+
+    &--top-xl-only {
+      @include spacing-mixin-top();
+    }
+  }
+
+  // -------------------------------------------------
+  // SPACING FOR MEDIA QUERIES "UP"
+  // -------------------------------------------------
+  @media #{$media-screen-xxs-min} {
+    &--bottom-xxs-up {
+      @include spacing-mixin-bottom();
+    }
+
+    &--top-xxs-up {
+      @include spacing-mixin-top();
+    }
+  }
+
+  @media #{$media-screen-xs-min} {
+    &--bottom-xs-up {
+      @include spacing-mixin-bottom();
+    }
+
+    &--top-xs-up {
+      @include spacing-mixin-top();
+    }
+  }
+
+  @media #{$media-screen-sm-min} {
+    &--bottom-sm-up {
+      @include spacing-mixin-bottom();
+    }
+
+    &--top-sm-up {
+      @include spacing-mixin-top();
+    }
+  }
+
+  @media #{$media-screen-md-min} {
+    &--bottom-md-up {
+      @include spacing-mixin-bottom();
+    }
+
+    &--top-md-up {
+      @include spacing-mixin-top();
+    }
+  }
+
+  @media #{$media-screen-lg-min} {
+    &--bottom-lg-up {
+      @include spacing-mixin-bottom();
+    }
+
+    &--top-lg-up {
+      @include spacing-mixin-top();
+    }
+  }
+
+  @media #{$media-screen-xl-min} {
+    &--bottom-xl-up {
+      @include spacing-mixin-bottom();
+    }
+
+    &--top-xl-up {
+      @include spacing-mixin-top();
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.c-user {
+  flex: 2;
+  color: $color-gray-3;
+  text-align: right;
+  font-size: $font-size-18;
+  line-height: $line-height-36;
+
+  a {
+    font-size: $font-size-18;
+
+    &:hover {
+      font-size: $font-size-18;
+    }
+  }
+
+  &__part {
+    display: none;
+    @media #{$media-screen-sm-min} {
+      display: inline-block;
+    }
+    &:not(:first-child) {
+      padding-left: $spacing--20;
+    }
+
+    svg {
+      margin-right: $spacing--5;
+      height: 21px;
+      width: 21px;
+      vertical-align: sub;
+    }
+    &__login {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: $spacing--15;
+      @media #{$media-screen-sm-min} {
+        position: relative;
+        top: auto;
+        right: auto;
+        display: inline-block;
+      }
+    }
+  }
+}

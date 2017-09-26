@@ -1,0 +1,106 @@
+.c-main-footer {
+  margin-top: $spacing--30;
+  background: $color-gradient-dark;
+
+  &__desktop {
+    display: none;
+    @media #{$media-screen-sm-min} {
+      display: block;
+    }
+  }
+
+  &__mobile {
+    display: block;
+    padding-bottom: $spacing--50;
+    @media #{$media-screen-sm-min} {
+      display: none;
+    }
+  }
+
+  &__row {
+    &:first-child {
+      padding: 0 $spacing--30;
+      @media #{$media-screen-sm-only} {
+        padding: 0;
+      }
+      @media #{$media-screen-md-min} {
+        min-height: 430px;
+        padding: 0 $spacing--30;
+      }
+    }
+
+    &:last-child {
+      padding: 0 $spacing--30 $spacing--50;
+      @media #{$media-screen-sm-min} {
+        padding: 0 0 $spacing--25;
+      }
+    }
+  }
+
+  &__column {
+    display: block;
+    padding-top: $spacing--10;
+    border-bottom: 1px solid $color-white;
+    @media #{$media-screen-sm-min} {
+      padding-top: $spacing--50;
+      padding-bottom: $spacing--20;
+      border-bottom: none;
+    }
+  }
+
+  &__title,
+  &__title a {
+    font-size: $font-size-24;
+    line-height: $line-height-29;
+    font-family: $font-family-light;
+    color: $color-white;
+    font-weight: normal;
+    text-decoration: none;
+    margin-bottom: $spacing--15;
+    cursor: default;
+  }
+
+  &__links {
+    display: block;
+    height: auto;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s linear;
+    @media #{$media-screen-sm-min} {
+      max-height: 100%;
+    }
+  }
+
+  &__link,
+  &__link:hover {
+    font-size: $font-size-20;
+    line-height: $line-height-50;
+    color: $color-white;
+    text-decoration: none;
+    font-family: $font-family-regular;
+  }
+
+  &__link__inline,
+  &__link__inline:hover {
+    display: inline-block;
+    border-right: 1px solid $color-white;
+    padding: 0 $spacing--10;
+    line-height: $line-height-24;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &__bottom-links {
+    text-align: center;
+    padding-top: $spacing--50;
+    @media #{$media-screen-md-min} {
+      padding-top: $spacing--20;
+    }
+  }
+}
+
+.cp-Panel-toggle {
+  text-decoration: none;
+}

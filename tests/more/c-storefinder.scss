@@ -1,0 +1,34 @@
+.c-storefinder {
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__header-left {
+    flex: 1 0 auto;
+  }
+
+  &__header-right {
+    flex: 1 0 auto;
+  }
+
+  .g-map {
+    margin-top: $spacing--40;
+    height: 100%;
+  }
+
+  .g-map-canvas {
+    width: 100%;
+    height: 400px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    margin-left: -$spacing--15;
+    margin-right: -$spacing--15;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,35 @@
+@mixin spacing-styleguide-example() {
+  &-0 { height: $spacing--0; }
+  &-5 { height: $spacing--5; }
+  &-10 { height: $spacing--10; }
+  &-15 { height: $spacing--15; }
+  &-20 { height: $spacing--20; }
+  &-30 { height: $spacing--30; }
+  &-40 { height: $spacing--40; }
+  &-50 { height: $spacing--50; }
+  &-60 { height: $spacing--60; }
+  &-70 { height: $spacing--70; }
+  &-80 { height: $spacing--80; }
+  &-90 { height: $spacing--90; }
+  &-100 { height: $spacing--100; }
+}
+
+.spacing-example {
+  border-left: 1px solid $color-gray-3;
+  text-align: center;
+  color: $color-white;
+
+  &__element {
+    background-color: $color-gray-2;
+    height: 50px;
+  }
+
+  &__space {
+    background-color: $color-orange;
+
+    &-bottom {
+      @include spacing-styleguide-example();
+    }
+  }
+}
+
