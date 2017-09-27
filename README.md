@@ -2,7 +2,7 @@
 
 > **Changes to the Frontend configs repo or project specific settings are only allowed in agreement with the frontend  or project team.**
 
-To ensure a high an consistent code quality for SCSS we use stylelint.
+To ensure a high an consistent code quality for SCSS/CSS we use stylelint.
 
 [https://stylelint.io/](https://stylelint.io/)
 
