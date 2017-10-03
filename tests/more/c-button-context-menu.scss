@@ -1,0 +1,32 @@
+.c-button-context-menu {
+  position: relative;
+
+  &__context-menu {
+    position: absolute;
+    z-index: $z-index-stack-50;
+    bottom: 60px;
+    width: 280px; // scss-lint:disable PropertyUnits
+    height: auto !important; // scss-lint:disable ImportantRule
+    background-color: $color-gray-4;
+    border: 1px solid $color-gray-2;
+    border-radius: $e-form-base-border-radius;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: $spacing--10 0;
+      padding-left: $spacing--10;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $color-orange;
+    }
+  }
+}

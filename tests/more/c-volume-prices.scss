@@ -1,0 +1,76 @@
+.c-volume-prices {
+  border: 1px solid $color-gray-1;
+
+  &__row {
+    background: $color-white-transparent;
+    margin-bottom: $spacing--15;
+    font-size: $font-size-20;
+
+    &:last-child {
+      margin-bottom: $spacing--10;
+    }
+  }
+
+  &__title__price {
+    padding-top: $spacing--10;
+    padding-bottom: $spacing--10;
+    font-size: $font-size-24;
+    line-height: $line-height-29;
+    color: $color-gray-3;
+    text-align: right;
+    font-family: $font-family-light;
+  }
+
+  &__title__volume {
+    padding-top: $spacing--10;
+    font-size: $font-size-24;
+    line-height: $line-height-29;
+    color: $color-gray-3;
+    text-align: left;
+    font-family: $font-family-light;
+  }
+
+  &__volume {
+    text-align: left;
+    padding-left: $spacing--20;
+    padding-top: $spacing--10;
+    padding-bottom: $spacing--10;
+    color: $color-gray-2;
+  }
+
+  &__price {
+    text-align: right;
+    padding-right: $spacing--20;
+    padding-top: $spacing--10;
+    padding-bottom: $spacing--10;
+    color: $color-gray-3;
+    .old {
+      text-decoration: line-through;
+      margin-right: $spacing--10;
+    }
+  }
+
+  &.c-volume-prices--inline {
+    border: 0;
+    border-spacing: 0;
+    margin-top: -20px;
+
+    .c-volume-prices__row {
+      margin-bottom: 0;
+      margin-top: 1px;
+    }
+
+    .c-volume-prices__volume {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background: $color-gray-1;
+      color: $color-gray-3;
+    }
+
+    .c-volume-prices__price {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background: $color-gray-1;
+    }
+  }
+}

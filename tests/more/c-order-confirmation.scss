@@ -1,0 +1,45 @@
+.c-order-confirmation {
+  &__title {
+    color: $color-orange;
+    font-family: $font-family-light;
+    font-size: $font-size-30;
+    margin-bottom: $spacing--20;
+  }
+
+  &__text {
+    font-size: $font-size-20;
+    width: 80%;
+  }
+
+  &__details {
+    display: block;
+    margin-top: $spacing--50;
+  }
+
+  &__details-box {
+    width: 100%;
+    margin-bottom: $spacing--20;
+    overflow: hidden;
+  }
+  @media #{$media-screen-md-min} {
+    &__details {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__details-box {
+      width: 48%;
+      margin-bottom: 0;
+    }
+  }
+}
+@media #{$media-screen-md-only} {
+  .c-main-content__content--main-navigation-open > .c-order-confirmation > .c-order-confirmation__details {
+    display: block;
+
+    > .c-order-confirmation__details-box {
+      width: 100%;
+      margin-bottom: $spacing--20;
+    }
+  }
+}

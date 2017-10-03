@@ -1,0 +1,109 @@
+.c-delivery-address-entry {
+  color: $color-gray-3;
+  margin-bottom: $spacing--30;
+
+  @media #{$media-screen-md-min} {
+    margin-bottom: 0;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    padding: 0 $spacing--15;
+
+    @media #{$media-screen-md-min} {
+      flex-direction: row;
+      align-items: baseline;
+      margin-top: 0;
+      padding: 0 $spacing--15;
+    }
+  }
+
+  &__field {
+    line-height: 35px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media #{$media-screen-md-min} {
+      width: 23%;
+      margin-right: 10px;
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    order: -1;
+    width: 100%;
+
+    @media #{$media-screen-md-min} {
+      width: 8%;
+      order: 10;
+      align-self: flex-start;
+    }
+  }
+
+  &__edit-mode {
+    flex: 1 0 auto;
+  }
+
+  &__edit-group {
+    display: flex;
+  }
+
+  &__button__icon {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  }
+
+  .e-input-text, .e-select {
+    margin-bottom: $spacing--10;
+
+    @media #{$media-screen-md-min} {
+      margin: $spacing--5 0;
+      margin-right: $spacing--10;
+    }
+  }
+
+  &--edit-mode {
+    margin: $spacing--30 0;
+  }
+}
+
+/*@media #{$media-lg-max} {
+  .c-main-content__content--main-navigation-open,
+  .c-main-content__content--mini-cart-open > * > * > .c-delivery-address > .c-delivery-address__body > .c-delivery-address-entry {
+    .c-delivery-address-entry__description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: $spacing--25;
+    }
+
+    .c-delivery-address-entry__fields {
+      display: none;
+      margin-top: -$spacing--10;
+    }
+
+    .c-delivery-address-entry__field {
+      width: 100%;
+    }
+
+    .c-delivery-address-entry__options {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    .c-delivery-address-entry__show-fields {
+      display: block;
+      margin-top: $spacing--5;
+    }
+  }
+}*/

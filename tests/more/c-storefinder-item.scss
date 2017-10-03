@@ -1,0 +1,174 @@
+.c-storefinder-item {
+  width: 100%;
+  display: flex;
+
+  &__inner-wrapper {
+    background-color: $color-white;
+    border: 1px solid $color-gray-1;
+    position: relative;
+    border-radius: 5px;
+    flex: 1;
+  }
+
+  &__wrapper {
+    padding-left: $spacing--15;
+    padding-right: $spacing--15;
+    margin-top: $spacing--30;
+    width: 100%;
+    display: flex;
+  }
+
+  &--open {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 1px solid $color-white;
+
+    .c-storefinder-item__additional__info {
+      border: 1px solid $color-gray-1;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-top: none;
+    }
+  }
+
+  &__row {
+  }
+
+  &__column {
+    display: block;
+  }
+
+  &__image {
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+    }
+  }
+
+  &__info {
+    font-size: $font-size-18;
+    line-height: $line-height-21;
+    padding: $spacing--25;
+    position: relative;
+  }
+
+  &__info__name {
+    font-size: $font-size-24;
+    line-height: $line-height-29;
+    font-family: $font-family-light;
+    color: $color-orange;
+    width: 85%;
+  }
+
+  &__info__address {
+    margin-top: $spacing--20;
+    color: $color-gray-3;
+    font-size: $font-size-16;
+    line-height: $line-height-19;
+  }
+
+  &__info__email {
+    color: $color-orange;
+    padding-top: $spacing--10;
+
+    a {
+      text-decoration: none;
+      color: $color-orange;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-orange;
+      }
+    }
+  }
+
+  &__info__numbers {
+    color: $color-gray-3;
+    padding-top: $spacing--15;
+  }
+
+  &__info__opening-hours__trigger {
+    padding-top: $spacing--15;
+    font-size: $font-size-16;
+    line-height: $line-height-19;
+    cursor: pointer;
+    color: $color-gray-3;
+  }
+
+  &__additional__info {
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    background: $color-white-transparent;
+    color: $color-gray-3;
+    z-index: $z-index-stack-30;
+    max-height: 0;
+    transition: max-height 0.5s;
+    overflow: hidden;
+    top: 100%;
+  }
+
+  &__additional__info__content {
+    padding: 20px;
+  }
+}
+@media #{$media-sm-min} {
+  .c-storefinder-item__wrapper {
+    width: 50%;
+  }
+}
+@media #{$media-md-min} {
+  .c-main-content__content {
+    .c-storefinder-item__wrapper {
+      width: 33.33%;
+    }
+
+    &.c-main-content__content--main-navigation-open,
+    &.c-main-content__content--mini-cart-open {
+      .c-storefinder-item__wrapper {
+        width: 50%;
+      }
+    }
+  }
+}
+@media #{$media-lg-min} {
+  .c-main-content__content {
+    .c-storefinder-item__wrapper {
+      width: 33.33%;
+    }
+
+    &.c-main-content__content--main-navigation-open,
+    &.c-main-content__content--mini-cart-open {
+      .c-storefinder-item__wrapper {
+        width: 33.33%;
+      }
+    }
+  }
+
+  .c-main-content__content {
+    &.c-main-content__content--main-navigation-open.c-main-content__content--mini-cart-open {
+      .c-storefinder-item__wrapper {
+        width: 50%;
+      }
+    }
+  }
+}
+@media #{$media-xl-min} {
+  .c-main-content__content {
+    &.c-main-content__content--main-navigation-open,
+    &.c-main-content__content--mini-cart-open {
+      .c-storefinder-item__wrapper {
+        width: 33.33%;
+      }
+    }
+  }
+
+  .c-main-content__content {
+    &.c-main-content__content--main-navigation-open.c-main-content__content--mini-cart-open {
+      .c-storefinder-item__wrapper {
+        width: 50%;
+      }
+    }
+  }
+}

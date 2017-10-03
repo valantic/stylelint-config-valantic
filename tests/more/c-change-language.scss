@@ -1,0 +1,61 @@
+.c-change-language {
+  float: left;
+  display: block;
+  height: 48px;
+  width: 48px;
+  color: $color-gray-3;
+  position: relative;
+  padding-top: 10px;
+  @media #{$media-sm-min} {
+    display: inline-block;
+    float: none;
+    height: auto;
+    width: auto;
+    padding-top: 0;
+  }
+
+  &__title {
+    display: none;
+    @media #{$media-sm-min} {
+      display: inline-block;
+    }
+  }
+
+  &__active {
+    color: $color-gray-2;
+    cursor: pointer;
+    position: relative;
+    @media #{$media-sm-min} {
+      text-decoration: underline;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    z-index: $z-index-stack-30;
+    background: $color-gray;
+    height: 50px;
+    border: 1px solid $color-gray-2;
+    max-width: 0;
+    width: auto;
+    transition: max-width 0.3s, opacity 0.3s;
+    overflow: hidden;
+    opacity: 0;
+    padding: $spacing--10 $spacing--5;
+    @media #{$media-sm-min} {
+      padding-top: 0;
+      height: auto;
+      padding: $spacing--5 $spacing--10;
+    }
+    display: flex;
+    flex-direction: row;
+
+    a {
+      flex: 1;
+      display: inline-block;
+    }
+  }
+
+}

@@ -1,0 +1,9 @@
+.c-checkout-order-comment {
+  &__comment {
+    margin-top: 0;
+  }
+  &__textarea {
+    border: none;
+    padding: $spacing--20;
+  }
+}

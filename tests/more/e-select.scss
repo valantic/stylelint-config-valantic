@@ -1,0 +1,64 @@
+.e-select {
+  @include e-form-base;
+
+  padding-right: 30px;
+
+  //Removes the standard icon on IE 10+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:not([multiple]) {
+    min-height: 2em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+    background: url("./svg/inline/i-arrow--down.svg") no-repeat right 0.5em center;
+    background-size: 1.2em;
+  }
+
+  &--state-success {
+    border-color: $color-green-3;
+  }
+
+  &--state-warning {
+    border-color: $color-orange;
+  }
+
+  &--state-error {
+    border-color: $color-red;
+  }
+}
+
+.e-select--state-default {
+  &.e-select--layout-default[disabled],
+  &.e-select--layout-horizontal[disabled],
+  &.e-select--layout-nested[disabled],
+  &.e-select--layout-vertical[disabled] {
+    border: 1px solid $color-gray-1;
+    min-height: 2em;
+
+    &:not([multiple]) {
+      background: url("./svg/inline/demo_i-down-light.svg") no-repeat right 0.5em center;
+      background-size: 1.2em;
+
+      &:disabled {
+        background: none;
+      }
+    }
+  }
+}
+
+// .e-select--state-default:disabled {
+//   background: none!important;
+// }
+
+.e-select--layout-horizontal {
+  min-width: 25%;
+}
+
+.e-select--layout-default,
+.e-select--layout-nested,
+.e-select--layout-vertical {
+  width: 100%;
+}

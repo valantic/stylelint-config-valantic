@@ -1,0 +1,79 @@
+.c-mini-cart-item {
+  margin-top: $spacing--15;
+  display: block;
+  position: relative;
+
+  &__header {
+    background: $color-white-transparent;
+    padding-right: $spacing--30;
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    &__image {
+      margin: $spacing--10;
+      width: 50px;
+    }
+
+    &__text {
+      padding-left: $spacing--10;
+    }
+
+    &__text,
+    a,
+    a:hover {
+      flex: 1;
+      color: $color-orange;
+      font-size: $font-size-16;
+      line-height: $line-height-19;
+      text-decoration: none;
+    }
+
+    &__delete {
+      position: absolute;
+      right: $spacing--10;
+      top: $spacing--5;
+      cursor: pointer;
+      height: $spacing--15;
+      width: $spacing--15;
+
+      svg {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__unit-price {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__unit {
+    flex: 1;
+    padding: 10px;
+    height: 68px;
+    font-size: $font-size-24;
+    line-height: $line-height-29;
+    background: $color-white-transparent;
+  }
+
+  &__price {
+    flex: 1;
+    background: $color-white-transparent;
+    text-align: right;
+    padding: $spacing--10;
+
+    &__amount {
+      color: $color-orange;
+      font-size: $font-size-24;
+      line-height: $line-height-29;
+      font-family: $font-family-bold;
+    }
+
+    &__tax {
+      color: $color-gray-2;
+      font-size: $font-size-16;
+      line-height: $line-height-19;
+    }
+  }
+}

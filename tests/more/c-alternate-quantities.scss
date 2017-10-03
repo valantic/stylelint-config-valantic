@@ -1,0 +1,9 @@
+.c-alternate-quantities {
+  width: 100%;
+  max-width: 300px;
+
+  &__headline {
+    color: $color-gray-3;
+    margin-bottom: $spacing--15;
+  }
+}

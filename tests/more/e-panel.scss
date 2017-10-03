@@ -1,0 +1,137 @@
+$e-panel-box-shadow-size: 0px 6px 6px 0px;
+
+@mixin e-panel_border-state($border-state) {
+  border-image-source: color($border-state);
+  border-image-slice: 1;
+}
+
+@mixin e-panel-box-shadow-color ($color, $opacity: 0.1) {
+  box-shadow: $e-panel-box-shadow-size rgba($color, $opacity);
+}
+
+.e-panel {
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.e-panel--inline {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.e-panel--inline-sm-up {
+
+  @media #{$media-screen-sm-min} {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}
+
+.e-panel--spacing-right{
+  margin-right: $spacing--30;
+
+  &:last-child {
+    margin-right: $spacing--0;
+  }
+}
+
+.e-panel--shadow {
+  @include e-panel-box-shadow-color($color-gray-3);
+}
+
+.e-panel__inner {
+  color: $color-gray-3;
+  position: relative;
+  line-height: 1;
+  background: transparent;
+  background-clip: padding-box;
+  border: solid $color-gray-1;
+  @include e-panel_border-state($color-white);
+
+  &--success {
+    border-color: $color-green-3;
+    @include e-panel_border-state($color-green-3);
+  }
+
+  &--error {
+    border-color: $color-red;
+    @include e-panel_border-state($color-red);
+  }
+
+  &--warning {
+    border-color: $color-orange;
+    @include e-panel_border-state($color-orange);
+  }
+
+  &--info {
+    border-color: $color-unused-1;
+    @include e-panel_border-state($color-unused-1);
+  }
+
+  &--border-thin {
+    border-width: 1px;
+  }
+
+  &--border-big {
+    border-width: 4px;
+  }
+
+  &--border-noborder {
+    border-width: 0;
+    padding: 0;
+  }
+
+  &--padding-flank-big {
+    padding-right: $spacing--10;
+    padding-left: $spacing--10;
+  }
+
+  &--insideScroll {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    display: inline-block;
+    width: calc(100% - 100px);
+    margin: 0 50px;
+  }
+
+  &--insideScroll-full-width {
+    width: 100%;
+    margin: 0;
+  }
+
+  &--background-color-transparent {
+    background-color: transparent;
+  }
+
+  &--background-color-default {
+    background-color: $color-gray-4;
+  }
+}
+
+.e-panel__content {
+  padding: $spacing--20;
+}
+
+.e-panel--no-padding {
+  .e-panel__content {
+    padding: 0;
+  }
+}
+
+.e-panel__arrow-left {
+  position: absolute;
+  z-index: $z-index-stack-10;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.e-panel__arrow-right {
+  position: absolute;
+  z-index: $z-index-stack-10;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

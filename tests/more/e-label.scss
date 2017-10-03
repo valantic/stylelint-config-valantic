@@ -1,0 +1,109 @@
+// BEGIN-FREESTYLE-USAGE e-label
+.e-label {
+  font-size: $font-size-16;
+  box-sizing: border-box;
+  padding: 0;
+  color: $color-gray-3;
+
+  &__text {
+    font-family: $font-family-regular; // To distinguish from regular text.
+    vertical-align: middle;
+  }
+
+  &[disabled] {
+    color: $color-gray-2;
+  }
+
+  // All labels which have a width set through col classes.
+  // They get a float style so we're dealing with this here.
+  &[class*='col-'] {
+    padding-right: 0.25em;
+    padding-top: 0.4em;
+    text-align: right;
+  }
+}
+// END-FREESTYLE-USAGE
+
+.e-label__text--layout-nested,
+.e-label__text--layout-horizontal {
+  display: inline-block;
+}
+
+.e-label--leading {
+  color: $color-gray-3;
+
+  .e-label__text--layout-vertical,
+  .e-label__text--layout-nested,
+  .e-label__text--layout-horizontal {
+    display: block;
+    margin-bottom: $spacing--10;
+    margin-right: $spacing--0;
+  }
+
+  .e-label__text--layout-horizontal {
+    @media #{$media-screen-xs-min} {
+      display: inline-block;
+      margin-right: $spacing--30;
+      margin-bottom: $spacing--0;
+    }
+  }
+}
+
+.e-label__text--checkbox,
+.e-label__text--radio {
+  margin-left: $spacing--5;
+}
+
+.e-label--no-input-visible {
+  display: inline-block;
+  cursor: pointer;
+
+  .e-input-radio {
+    opacity: 0;
+    position: absolute;
+  }
+
+  &:hover {
+    .e-label__text::before {
+      background: $color-unused-1;
+      color: $color-white;
+    }
+
+    &[disabled] .e-label__text::before {
+      background: $color-white;
+      color: $color-unused-4;
+      cursor: default;
+    }
+  }
+}
+
+.e-label--label-up {
+  text-align: center;
+  display: inline-block;
+}
+
+.e-label__text--label-up {
+  display: block;
+  margin: $spacing--0;
+  margin-bottom: $spacing--15;
+}
+
+.e-label__text--label-first {
+  margin-left: $spacing--0;
+  margin-right: $spacing--5;
+}
+
+.e-label--label-hidden {
+  .e-label__text {
+    position: absolute;
+    left: -10000em;
+    top: -10000em;
+  }
+}
+
+.e-label--c-value-display {
+  .e-label__text {
+    font-weight: inherit;
+    vertical-align: inherit;
+  }
+}

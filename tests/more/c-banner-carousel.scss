@@ -1,0 +1,32 @@
+.c-banner-carousel {
+  &__item {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .e-button {
+      display: none;
+      @media #{$media-sm-min} {
+        display: block;
+      }
+    }
+  }
+
+  &__item--no-link {
+    cursor: default;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid $color-white;
+  height: 16px;
+  width: 16px;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgba(238, 127, 0, 0.65);
+}

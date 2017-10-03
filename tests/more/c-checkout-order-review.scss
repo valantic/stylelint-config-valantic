@@ -1,0 +1,18 @@
+.checkout-order-review__steps {
+  width: 90%;
+  margin: auto;
+}
+
+@media #{$media-screen-md-min} {
+  .checkout-order-review__steps {
+    width: 95%;
+    margin: auto;
+  }
+}
+
+@media #{$media-screen-lg-min} {
+  .checkout-order-review__steps {
+    max-width: 570px;
+    margin: auto;
+  }
+}

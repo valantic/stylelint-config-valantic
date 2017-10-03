@@ -1,0 +1,26 @@
+.c-input-text--horizontal {
+
+  .e-label {
+    font-size: 0;
+  }
+
+  .e-label__text--layout-horizontal {
+    margin-right: $spacing--0;
+    font-size: $font-size-16;
+
+    @media #{$media-screen-xs-min} {
+      display: inline-block;
+      width: 25%;
+    }
+  }
+
+  .e-input-text--layout-horizontal {
+    display: block;
+    font-size: $font-size-20;
+
+    @media #{$media-screen-xs-min} {
+      display: inline-block;
+      width: 75%;
+    }
+  }
+}

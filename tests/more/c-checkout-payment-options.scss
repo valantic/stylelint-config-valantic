@@ -1,0 +1,11 @@
+.c-checkout-payment-options {
+
+  .e-label--disabled {
+    display: none;
+
+    &.e-label--selected {
+      display: block;
+    }
+  }
+
+}

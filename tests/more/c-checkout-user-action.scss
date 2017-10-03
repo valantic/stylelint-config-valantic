@@ -1,0 +1,31 @@
+.checkout-user-action__steps, .checkout-user-action__button {
+  width: 90%;
+  margin: auto;
+}
+
+@media #{$media-screen-md-min} {
+  .c-main-content__content--main-navigation-open > .c-checkout-user-action > .row > .checkout-user-action__steps,
+  .c-main-content__content--main-navigation-open > .c-checkout-user-action > .row > .checkout-user-action__button {
+    width: 95%;
+    margin-left: 5%;
+  }
+
+  .checkout-user-action__steps, .checkout-user-action__button {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media #{$media-screen-lg-min} {
+  .c-main-content__content--main-navigation-open > .c-checkout-user-action > .row > .checkout-user-action__steps,
+  .c-main-content__content--main-navigation-open > .c-checkout-user-action > .row > .checkout-user-action__button {
+    max-width: 570px;
+    margin-left: 15%;
+  }
+
+  .checkout-user-action__steps, .checkout-user-action__button {
+    max-width: 570px;
+    margin: auto;
+  }
+}
+

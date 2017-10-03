@@ -1,0 +1,22 @@
+.c-product-table-item {
+  outline: 0;
+
+  td {
+    padding: $spacing--15 $spacing--10 $spacing--10;
+    line-height: 30px;
+    background-color: $color-white;
+    vertical-align: top;
+  }
+
+  &--selected {
+    td {
+      color: $color-gray-3;
+      background-color: $color-gray-2;
+    }
+  }
+
+  .c-product-classifications__list {
+    margin-bottom: 0;
+    word-wrap: break-word;
+  }
+}

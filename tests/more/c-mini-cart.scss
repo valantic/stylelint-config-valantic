@@ -1,0 +1,67 @@
+.c-mini-cart {
+  background: $color-gray-1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  z-index: $z-index-stack-60;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s, opacity 0.3s;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &--open {
+    opacity: 1;
+    transform: translateX(0px);
+
+    @media #{$media-screen-sm-min} {
+      width: 300px;
+      padding: $spacing--20 $spacing--10;
+    }
+  }
+
+  &__header {
+    color: $color-orange;
+    font-size: $font-size-24;
+    line-height: $line-height-29;
+    font-family: $font-family-light;
+    margin-bottom: $spacing--10;
+  }
+
+  &__price-list {
+    margin-top: $spacing--30;
+  }
+
+  &__price {
+    margin-top: $spacing--20;
+    color: $color-orange;
+    font-size: $font-size-30;
+    line-height: $line-height-43;
+    text-align: right;
+    font-family: $font-family-bold;
+
+    span {
+      float: left;
+    }
+  }
+
+  &__additional-price {
+    margin-top: $spacing--5;
+    text-align: right;
+    font-size: $font-size-16;
+
+    span {
+      float: left;
+    }
+  }
+
+  &__taxinfo {
+    text-align: right;
+    color: $color-gray-2;
+    font-size: $font-size-16;
+    line-height: $line-height-19;
+    margin-bottom: $spacing--30;
+  }
+}

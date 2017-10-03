@@ -1,0 +1,14 @@
+.c-checkout-delivery-options {
+  .e-label--disabled {
+    display: none;
+    &.e-label--selected {
+      display: block;
+    }
+  }
+
+  .e-select[disabled],
+  .e-input-text[disabled] {
+    color: $color-gray-3;
+  }
+
+}

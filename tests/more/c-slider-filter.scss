@@ -1,0 +1,74 @@
+.c-slider-filter {
+  width: 100%;
+  @media #{$media-screen-sm-min} {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__label--right {
+    display: flex;
+    position: absolute;
+    top: $spacing--10;
+    right: $spacing--15;
+    @media #{$media-screen-sm-min} {
+      position: relative;
+      margin-left: $spacing--40;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__label--left {
+    display: flex;
+    position: absolute;
+    top: $spacing--10;
+    left: $spacing--15;
+    @media #{$media-screen-sm-min} {
+      position: relative;
+      margin-right: $spacing--30;
+      left: 0;
+      top: 0;
+      @media all and (-ms-high-contrast: none) {
+        margin-right: 80px;
+      }
+    }
+  }
+}
+
+.noUi-horizontal {
+  height: 1px;
+  border-color: $color-gray-1;
+  box-shadow: none;
+  width: 96%;
+  margin-top: $spacing--50;
+  @media #{$media-screen-sm-min} {
+    width: 75%;
+    margin-top: 0;
+  }
+
+  .noUi-handle {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    background-color: $color-white;
+    box-shadow: none;
+    border-radius: 0;
+    top: -25px;
+
+    &:after,
+    &:before {
+      background: $color-white;
+    }
+  }
+}
+
+.noUi-handle-lower {
+  background: url("svg/inline/i-arrow.svg") no-repeat center;
+  background-size: 30px;
+}
+
+.noUi-handle-upper {
+  background: url("svg/inline/i-arrow--back.svg") no-repeat center;
+  background-size: 30px;
+}

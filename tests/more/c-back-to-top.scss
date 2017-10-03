@@ -1,0 +1,23 @@
+.c-back-to-top {
+  display: none;
+  position: fixed;
+  right: $spacing--15;
+  bottom: $spacing--25;
+  z-index: $z-index-stack-90;
+
+  @media #{$media-screen-sm-min} {
+    right: $spacing--30;
+  }
+
+  &__button {
+    width: 30px;
+  }
+
+  &--show {
+    display: block;
+  }
+
+  .e-button {
+    background-color: rgba($color-white, 0.9);
+  }
+}

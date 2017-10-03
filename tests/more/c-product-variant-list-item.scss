@@ -1,0 +1,92 @@
+.c-product-variant-list-item {
+  outline: 0;
+  border: 1px solid $color-gray-1;
+  border-radius: 5px;
+  background-color: $color-white;
+
+  .c-add-to-cart__button--mini {
+    max-width: 200px;
+    float: right;
+  }
+
+  td {
+    padding: $spacing--15 $spacing--10 $spacing--10;
+    line-height: 30px;
+    vertical-align: top;
+    position: relative;
+  }
+
+  &--highlighted {
+    color: $color-orange;
+  }
+
+  &__discountPrice {
+    background: $color-red;
+    height: 40px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: $spacing--10;
+    text-align: center;
+    font-size: $font-size-16;
+    color: $color-white;
+    padding-top: $spacing--15;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 50px 0 0;
+      border-color: $color-red transparent transparent transparent;
+    }
+  }
+
+  &__details {
+    td {
+      border: 1px solid $color-gray-1;
+      padding: $spacing--10;
+      line-height: $line-height-24;
+    }
+
+    &__headline {
+      color: $color-gray-3;
+      padding-top: $spacing--10;
+      padding-bottom: $spacing--10;
+      width: 100%;
+    }
+
+    &__value {
+      margin-top: $spacing--10;
+      margin-bottom: $spacing--10;
+      width: 100%;
+      display: block;
+      height: auto;
+      float: left;
+    }
+
+    &__order_unit {
+      float: right;
+      text-align: right;
+      padding-right: $spacing--50;
+    }
+  }
+
+  &__corner {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    svg {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

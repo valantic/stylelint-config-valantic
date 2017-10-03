@@ -1,0 +1,54 @@
+$e-input-checkbox-border: none;
+$e-input-checkbox-border-circle: 2px;
+$e-input-checkbox-size: 1.25em;
+$e-input-checkbox-shadow: 0 0 0 1px $color-gray-2;
+
+.e-input-checkbox {
+  @include e-form-base;
+  display: none;
+
+  &--state-default:checked + .e-input-checkbox__fake-checkbox {
+    background-image: url('./svg/inline/i-check-1.svg');
+    background-repeat: no-repeat;
+    background-size: 0.95em;
+    background-position: center center;
+  }
+
+  &--state-success:checked + .e-input-checkbox__fake-checkbox {
+    background: $color-green-3;
+  }
+
+  &--state-warning:checked + .e-input-checkbox__fake-checkbox {
+    background: $color-orange;
+  }
+
+  &--state-error:checked + .e-input-checkbox__fake-checkbox {
+    background: $color-red;
+  }
+
+  &[disabled] + .e-input-checkbox__fake-checkbox {
+    cursor: default;
+  }
+
+  &[disabled]:checked + .e-input-checkbox__fake-checkbox {
+    background-image: url('./svg/inline/i-check-1-fix.svg');
+    background-repeat: no-repeat;
+    background-size: 0.95em;
+    background-position: center center;
+  }
+}
+
+.e-input-checkbox__fake-checkbox {
+  box-shadow: $e-input-checkbox-shadow;
+  position: relative;
+  display: inline-block;
+  content: '';
+  vertical-align: middle;
+  border-radius: $e-input-checkbox-border-circle;
+  border: $e-input-checkbox-border;
+  background: $color-white;
+  width: $e-input-checkbox-size;
+  height: $e-input-checkbox-size;
+  cursor: pointer;
+  margin: 1px; // make room for the box shadow so it doesnt overflow
+}

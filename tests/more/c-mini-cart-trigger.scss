@@ -1,0 +1,38 @@
+.c-mini-cart-trigger {
+  position: absolute;
+  right: $spacing--15;
+  top: $spacing--45;
+  @media #{$media-sm-min} {
+    position: inherit;
+    display: inline-block;
+    margin-left: 12px;
+  }
+
+  .c-mini-cart-trigger__value {
+    height: 50px;
+    min-width: 30px;
+    padding-left: $spacing--5;
+    padding-right: $spacing--5;
+    border: 1px solid $color-gray-1;
+    display: block;
+    float: right;
+    line-height: $line-height-50;
+    color: $color-gray-3;
+    font-size: $font-size-20;
+    position: relative;
+    font-family: $font-family-light;
+  }
+
+  .c-mini-cart-trigger__counter {
+    position: absolute;
+    right: $spacing--10;
+    top: -$spacing--15;
+    padding-left: 2px;
+    padding-right: 2px;
+    background: $color-orange;
+    color: white;
+    line-height: $line-height-21;
+    font-size: $font-size-16;
+  }
+
+}

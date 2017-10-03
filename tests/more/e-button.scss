@@ -1,0 +1,545 @@
+$e-button-border-radius: 2px;
+$e-button-padding: 11px 10px 10px 10px;
+
+.e-button, .e-button__button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: $color-gray-2;
+  border: 1px solid $color-gray-2;
+  border-radius: $e-button-border-radius;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family-light;
+  line-height: $line-height-29;
+  font-size: $font-size-24;
+  margin: $spacing--0;
+  text-align: center;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: normal;
+  pointer-events: all;
+
+  &:hover {
+    color: $color-white;
+  }
+
+  a, a:hover {
+    font-size: $font-size-24;
+    line-height: $line-height-29;
+  }
+}
+
+.e-button {
+  transition: transform 0.3s;
+
+  &.active, &:active {
+    color: $color-gray-3;
+    border-color: $color-gray-1;
+  }
+
+  &:hover {
+    transform: scale(0.98);
+  }
+
+  &--negative {
+    background: none;
+    border-color: $color-gray-1;
+    color: $color-gray-3;
+
+    &:hover {
+      color: $color-gray-3;
+    }
+  }
+}
+
+.e-button--link {
+  padding: $e-button-padding;
+}
+
+.e-button__button {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: inherit;
+  height: 100%;
+  width: 100%; // Important for the click area
+  padding: $e-button-padding;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.e-button--orange {
+  color: $color-white;
+  background: $color-orange;
+  border-color: $color-orange;
+
+  &.active, &:active {
+    color: $color-white;
+    border-color: $color-orange;
+  }
+}
+
+.e-button--disabled, .e-button--disabled:hover, .e-button[disabled] {
+  background-color: transparent;
+  border-color: $color-gray-1 !important;
+  color: $color-orange !important;
+  cursor: default;
+  transform: none;
+
+  svg {
+    color: $color-gray-1 !important;
+
+    * {
+      fill: $color-gray-1 !important;
+    }
+  }
+
+  .e-button, .e-button__button, .e-button__button:hover {
+    color: $color-orange;
+  }
+}
+
+// .e-button--cta {
+//   background-color: $color-unused-2;
+//   width: inherit;
+// }
+
+.e-button__icon-button {
+  height: 50px;
+  width: 50px;
+  border: 1px solid $color-gray-1;
+  background: none;
+  pointer-events: all;
+
+  .e-button__button {
+    padding: 0;
+
+    &.e-button--link {
+      svg {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  svg {
+    pointer-events: none;
+    color: $color-gray-3;
+
+    * {
+      fill: $color-gray-3;
+    }
+    display: block;
+    margin: auto;
+  }
+
+  &.e-button--active, &:active, &:hover {
+    transform: none;
+    border-color: $color-orange;
+
+    svg {
+      * {
+        fill: $color-orange;
+      }
+    }
+  }
+}
+
+.e-button--full-width {
+  width: 100%;
+}
+
+.e-button--right-top {
+  position: absolute;
+  right: $spacing--10;
+  top: $spacing--10;
+  z-index: $z-index-stack-20;
+}
+
+.e-button__triangle--buttom-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: none;
+  padding: 0 !important;
+  line-height: 0;
+
+  height: 25px;
+  background: none;
+
+  .e-button__button {
+    height: 25px;
+    width: 25px;
+    background: url("svg/symbol/e-corner.svg") no-repeat bottom right;
+    background-size: contain;
+    padding: 0;
+  }
+
+  &.e-button--disabled {
+    background: url("svg/symbol/e-corner--inactive.svg") no-repeat bottom right;
+  }
+
+  &.e-button--active {
+    .e-button__button {
+      background: url("svg/symbol/e-corner--active.svg") no-repeat bottom right;
+      background-size: contain;
+    }
+  }
+}
+
+.e-button__favorite--top-right {
+  position: absolute;
+  z-index: $z-index-stack-40;
+  right: 0;
+  top: 0;
+  border: none;
+  padding: 0 !important;
+  line-height: 0;
+
+  height: 60px;
+  background: none;
+
+  .e-button__button {
+    height: 60px;
+    width: 60px;
+    background: url("svg/symbol/e-favorite-state--inactive.svg") no-repeat top right;
+    background-size: contain;
+    padding: 0;
+  }
+
+  &.e-button--disabled {
+    background: url("svg/symbol/e-favorite-state--inactive.svg") no-repeat top right;
+  }
+
+  &.e-button--active {
+    .e-button__button {
+      background: url("svg/symbol/e-favorite-state--active.svg") no-repeat top right;
+      background-size: contain;
+    }
+  }
+}
+
+.e-button--right-bottom {
+  position: absolute;
+  right: $spacing--20;
+  bottom: $spacing--20;
+  z-index: $z-index-stack-20;
+}
+
+.e-button--left-bottom {
+  position: absolute;
+  left: $spacing--20;
+  bottom: $spacing--20;
+  z-index: $z-index-stack-20;
+}
+
+.e-button--white {
+  color: $color-white;
+  background: none;
+  border-color: $color-white;
+}
+
+.e-button--white {
+  color: $color-white;
+  background: none;
+  border-color: $color-white;
+}
+
+.e-button--grey1 {
+  color: $color-gray-1;
+  background: none;
+  border-color: $color-gray-1;
+}
+
+.e-button--grey2 {
+  color: $color-gray-2;
+  background: none;
+  border-color: $color-gray-2;
+
+  &:hover, .e-button__button:hover {
+    color: inherit;
+  }
+}
+
+.e-button--grey3 {
+  color: $color-gray-3;
+  background: none;
+  border-color: $color-gray-3;
+}
+
+.e-button--grey4 {
+  color: #3a4853;
+  background: none;
+  border-color: #3a4853;
+}
+
+.e-button--blue1 {
+  color: #eaf6fc;
+  background: none;
+  border-color: #eaf6fc;
+}
+
+.e-button--blue2 {
+  color: #d5edfa;
+  background: none;
+  border-color: #d5edfa;
+}
+
+.e-button--blue3 {
+  color: #b0dff5;
+  background: none;
+  border-color: #b0dff5;
+}
+
+.e-button--green1 {
+  color: #ecf4e8;
+  background: none;
+  border-color: #ecf4e8;
+}
+
+.e-button--green2 {
+  color: #d8e9cf;
+  background: none;
+  border-color: #d8e9cf;
+}
+
+.e-button--green2 {
+  color: #b6d8ad;
+  background: none;
+  border-color: #b6d8ad;
+}
+
+.e-button--yellow1 {
+  color: #ffe9bf;
+  background: none;
+  border-color: #ffe9bf;
+}
+
+.e-button--yellow2 {
+  color: #ffdb87;
+  background: none;
+  border-color: #ffdb87;
+}
+
+.e-button--yellow3 {
+  color: #fdcb43;
+  background: none;
+  border-color: #fdcb43;
+}
+
+.e-button--transparent {
+  background-color: transparent;
+  border-color: transparent;
+
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+// .e-button,
+// .e-button__button {
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   background-color: $color-white;
+//   border: 2px solid $color-unused-1;
+//   border-radius: $e-button-border-radius;
+//   color: $color-unused-1;
+//   cursor: pointer;
+//   display: inline-block;
+//   font-family: $font-family-light;
+//   line-height: 2;
+//   margin: $spacing--0;
+//   text-align: center;
+//   outline: 0;
+//   padding: 0;
+//   text-decoration: none;
+//   vertical-align: baseline;
+//   white-space: normal;
+// }
+//
+// .e-button--link {
+//   padding: $e-button-padding;
+// }
+//
+// .e-button__button {
+//   background: transparent;
+//   border: 0;
+//   color: inherit;
+//   cursor: inherit;
+//   height: 100%;
+//   width: 100%; // Important for the click area
+//   padding: $e-button-padding;
+// }
+//
+
+//
+// .e-button--hover,
+// .e-button:hover {
+//   background-color: $color-unused-1;
+//   color: $color-white;
+// }
+//
+// .e-button--active,
+// .e-button:active {
+//   background-color: $color-unused-1;
+//   color: $color-white;
+// }
+//
+// .e-button--focus,
+// .e-button:focus {
+//   background-color: $color-unused-1;
+//   color: $color-white;
+// }
+//
+// .e-button--transparent {
+//   background: transparent;
+//   border: 0;
+//
+//   .e-button__button {
+//     padding: 0;
+//   }
+//
+//   &:hover {
+//     background: transparent;
+//     border: 0;
+//     color: $color-unused-1;
+//   }
+// }
+//
+// .e-button--disabled,
+// .e-button--disabled:hover,
+// .e-button[disabled] {
+//   background-color: transparent;
+//   border-color: $color-unused-4;
+//   color: $color-unused-4;
+//   cursor: default;
+// }
+//
+// .e-button--wide {
+//   min-width: 60%;
+// }
+//
+// .e-button--fill {
+//   width: 100%;
+//   min-height: 0;
+//   line-height: 1;
+//   font-size: 0;
+//
+//   .e-button__button {
+//     text-align: left;
+//     width: 100%;
+//     min-height: 0;
+//     line-height: 1.5;
+//   }
+// }
+//
+
+//
+// .e-button--nomargin {
+//   margin: 0;
+// }
+//
+// .e-button--success {
+//   color: $color-green-3;
+//   border-color: $color-green-3;
+//
+//   &.e-button--hover,
+//   &:hover {
+//     background-color: $color-green-3;
+//     color: $color-white;
+//   }
+//
+//   &.e-button--active,
+//   &:active {
+//     background-color: $color-green-3;
+//     color: $color-white;
+//   }
+//
+//   &.e-button--focus,
+//   &:focus {
+//     background-color: $color-green-3;
+//     color: $color-white;
+//   }
+// }
+//
+// .e-button--cancel {
+//   color: $color-red;
+//   border-color: $color-red;
+//
+//   &.e-button--hover,
+//   &:hover {
+//     background-color: $color-red;
+//     color: $color-white;
+//   }
+//
+//   &.e-button--active,
+//   &:active {
+//     background-color: $color-red;
+//     color: $color-white;
+//   }
+//
+//   &.e-button--focus,
+//   &:focus {
+//     background-color: $color-red;
+//     color: $color-white;
+//   }
+// }
+//
+// .e-button__icon {
+//   height: 100%;
+//   width: 100%;
+// }
+//
+// .e-button__icon-outer {
+//   height: 4em;
+//
+//   &--square {
+//     width: 4em;
+//   }
+//
+//   &--rectangle {
+//     width: 8em;
+//   }
+//
+//   &--mini {
+//     font-size: $font-size-small;
+//   }
+//
+//   &:last-child {
+//     margin-right: $spacing--0;
+//
+//     .e-button__button {
+//       margin-right: $spacing--0;
+//     }
+//   }
+// }
+//
+// .e-button--small-square {
+//   width: 2em;
+//   height: 2em;
+//   line-height: normal;
+//   vertical-align: top;
+//
+//   .e-button__button {
+//     padding: $spacing--5;
+//     line-height: inherit;
+//   }
+// }
+//
+// .e-button--big-square {
+//   width: 3em;
+//   height: 3em;
+//
+//   .e-button__button {
+//     padding: $spacing--10;
+//   }
+// }
+//
+// .e-button--hor-scroll {
+//   height: 50px;
+//   width: 50px;
+//   padding: $spacing--10;
+// }

@@ -1,0 +1,62 @@
+.c-sales-badge {
+
+  &__badge {
+    width: 100px;
+    height: 30px;
+    background-color: $color-red;
+    color: $color-white;
+    padding: 2px 0 2px $spacing--20;
+    margin: 20px;
+    font-size: $font-size-24;
+
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+
+      left: 80px;
+      top: -29px;
+      border-top: 30px solid transparent;
+      border-left: 30px solid $color-red;
+    }
+  }
+
+  &__badge--price {
+    width: 150px;
+    height: 30px;
+    background-color: $color-red;
+    color: $color-white;
+    padding: 2px 0 2px $spacing--15;
+    margin: 20px;
+    font-size: $font-size-24;
+
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+
+      left: 135px;
+      top: -29px;
+      border-top: 30px solid transparent;
+      border-left: 30px solid $color-red;
+    }
+  }
+}
+
+.c-product-grid-item__content--mini {
+  .c-sales-badge__badge--price {
+    font-size: $font-size-16;
+    line-height: $line-height-24;
+    width: 100px;
+    height: 25px;
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+      left: 85px;
+      top: -26px;
+      border-top: 25px solid transparent;
+      border-left: 25px solid $color-red;
+    }
+  }
+}
