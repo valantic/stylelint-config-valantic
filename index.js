@@ -27,6 +27,7 @@ module.exports = {
       }
     ],
     'scss/at-rule-no-unknown': true,
+    'scss/double-slash-comment-whitespace-inside': 'always',
     'order/order': [
       'custom-properties',
       'dollar-variables',

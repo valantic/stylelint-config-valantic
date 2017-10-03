@@ -27,6 +27,7 @@
   }
 }
 
+//This line should give error about missing whitespace at start of comment
 .c-blockElement { // This line should give error about invalid class
   color: #000000;
 }
