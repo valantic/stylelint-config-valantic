@@ -8,9 +8,26 @@
 }
 
 .c-block__element--modifier--modifier { // This line should give error about invalid class
+  @extend %foo; // Valid extend position
+
+  @include my_mixin(); // Valid include position
+
+  @media { // This line should give an error because of misplaced @media
+    color: #000000;
+  }
+
   color: #000000;
+
+  @extend %foo; // This line should give an error because of misplaced @extend
+
+  @include my_mixin(); // This line should give an error because of misplaced @include
+
+  @media { // Valid media position
+    color: #000000;
+  }
 }
 
+//This line should give error about missing whitespace at start of comment
 .c-blockElement { // This line should give error about invalid class
   color: #000000;
 }

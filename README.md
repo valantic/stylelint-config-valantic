@@ -15,7 +15,18 @@ Our config is currently optimized for Stylelint 8.1.1 To check for updates, see 
 ## Installing stylelint-movento package
 
 ```shell
-$ npm install --save-dev git+https://git.movento.com/movento-public/stylelint-config-movento.git#2.0.1
+$ npm install --save-dev git+https://git.movento.com/movento-public/stylelint-config-movento.git#2.1.0
+```
+
+### Create config
+
+In the root of your project add a .stylelintrc file and add the following content to enable the movento config for your project.
+
+```
+{
+  "extends": "stylelint-config-movento"
+}
+
 ```
 
 ## Use
@@ -44,7 +55,7 @@ $ npm run stylelint <app|file.js>
 
 ### Ember.js
 
-**NOTE: currently ember-cli-stylelint uses Stylelint 7.x.x. Unfortunately Stylelint is not backwards compatible and will throw errors on linting configurations, which are unknown to the version (which is the case for the movento config 2.0.1 and Stylelint < 8.0.0)**
+**NOTE: currently ember-cli-stylelint uses Stylelint 7.x.x. Unfortunately Stylelint is not backwards compatible and will throw errors on linting configurations, which are unknown to the version (which is the case for the movento config 2.1.0 and Stylelint < 8.0.0)**
 
 ```
 $ ember install ember-cli-stylelint
