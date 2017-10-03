@@ -21,7 +21,7 @@ module.exports = {
     'selector-list-comma-newline-after': 'always',
     'selector-max-id': 0,
     'selector-class-pattern': [
-      /^((row)|(col-.*)|(spacing-.*)|(align--.*)|(container)|(container-fluid)|(focus)|((\.?[cel]-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z]+|[0-9]+))*)?(--([a-z]+|h[1-6])(-([a-z]+|[0-9]+))*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\(["a-z0-9]+\))?)?))+$/m,
+      /^((row)|(col-.*)|(spacing(-.*|$))|(align(--.*|$))|(container)|(container-fluid)|(focus)|((\.?[cel]-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z]+|[0-9]+))*)?(--([a-z]+|h[1-6])(-([a-z]+|[0-9]+))*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\(["a-z0-9]+\))?)?))+$/m,
       {
         resolveNestedSelectors: true
       }
@@ -37,8 +37,7 @@ module.exports = {
       },
       {
         type: 'at-rule',
-        name: 'include',
-        parameter: '.*?'
+        name: 'include'
       },
       'declarations',
       {
@@ -54,7 +53,7 @@ module.exports = {
 /**
  * BEM pattern
  *
- * fixedValue = .row | .col-.* | .spacing-.*
+ * fixedValue = .row | .col-.* | .spacing$ | .spacing-.* | .align$ | .align--.*
  * bemName = Namespace Block (Element)? (MODIFIER)? (Pseudo)? | Fixed-Value
  * Pattern = fixedValue | bemName
  * Namespace = .[cel]-
@@ -99,8 +98,10 @@ module.exports = {
  row
  col-6
  align--left
+ align
 
  * invalid
+ alignment
  foo
  c-block---foo
  c-block--element--foo
