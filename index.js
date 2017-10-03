@@ -6,7 +6,7 @@ module.exports = {
     'stylelint-scss'
   ],
   rules: {
-    'at-rule-no-unknown': false, // Handled by stylelint-scss at-rule-no-unknown
+    'at-rule-no-unknown': null, // Handled by stylelint-scss at-rule-no-unknown
     'color-hex-length': 'long',
     'color-named': 'never',
     'declaration-no-important': true,
