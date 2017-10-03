@@ -1,11 +1,12 @@
 'use strict';
 
 module.exports = {
-  extends: 'stylelint-config-standard',
+  'extends': 'stylelint-config-standard',
   'plugins': [
-    'stylelint-scss'
+    'stylelint-scss',
+    'stylelint-order'
   ],
-  rules: {
+  'rules': {
     'at-rule-no-unknown': null, // Handled by stylelint-scss at-rule-no-unknown
     'color-hex-length': 'long',
     'color-named': 'never',
@@ -20,12 +21,32 @@ module.exports = {
     'selector-list-comma-newline-after': 'always',
     'selector-max-id': 0,
     'selector-class-pattern': [
-      /^((row)|(col-.*)|(spacing-.*)|((\.?[cel]-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z]+|[0-9]+))*)?(--[a-z][a-z]+(-([a-z]+|[0-9]+))*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\(["a-z0-9]+\))?)?))+$/m,
+      /^((row)|(col-.*)|(spacing-.*)|(align--.*)|(container)|(container-fluid)|(focus)|((\.?[cel]-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z]+|[0-9]+))*)?(--([a-z]+|h[1-6])(-([a-z]+|[0-9]+))*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\(["a-z0-9]+\))?)?))+$/m,
       {
         resolveNestedSelectors: true
       }
     ],
-    'scss/at-rule-no-unknown': true
+    'scss/at-rule-no-unknown': true,
+    'order/order': [
+      'custom-properties',
+      'dollar-variables',
+      {
+        type: 'at-rule',
+        name: 'extend'
+      },
+      {
+        type: 'at-rule',
+        name: 'include',
+        parameter: '.*?'
+      },
+      'declarations',
+      {
+        type: 'at-rule',
+        name: 'media',
+        hasBlock: true
+      },
+      'rules'
+    ]
   }
 };
 
@@ -76,10 +97,10 @@ module.exports = {
  c-advertisement-1__element-1--modifier-1
  row
  col-6
+ align--left
 
  * invalid
  foo
- align--left
  c-block---foo
  c-block--element--foo
  c-block__element__element
