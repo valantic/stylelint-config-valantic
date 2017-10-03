@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-movento",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Default movento configuration for stylelint",
   "main": "index.js",
   "scripts": {
