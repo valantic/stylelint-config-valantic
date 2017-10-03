@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-movento",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Default movento configuration for stylelint",
   "main": "index.js",
   "scripts": {
@@ -16,10 +16,9 @@
   "dependencies": {
     "stylelint": "^8.1.1",
     "stylelint-config-standard": "^17.0.0",
-    "stylelint-scss": "^2.1.0"
+    "stylelint-scss": "^2.1.0",
+    "stylelint-order": "^0.7.0"
   },
   "devDependencies": {
-    "stylelint": "^8.1.1",
-    "stylelint-order": "^0.7.0"
   }
 }
