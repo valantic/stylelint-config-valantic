@@ -18,6 +18,17 @@ Our config is currently optimized for Stylelint 8.1.1 To check for updates, see 
 $ npm install --save-dev git+https://git.movento.com/movento-public/stylelint-config-movento.git#2.0.1
 ```
 
+### Create config
+
+In the root of your project add a .stylelintrc file and add the following content to enable the movento config for your project.
+
+```
+{
+  "extends": "stylelint-config-movento"
+}
+
+```
+
 ## Use
 
 Now your ready to enable Stylelint in your editor or use it on the command line!
