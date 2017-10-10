@@ -7,10 +7,18 @@ module.exports = {
     'stylelint-order'
   ],
   'rules': {
+    'at-rule-empty-line-before': [
+      'always',
+      {
+        ignoreAtRules: 'else',
+        "except": ["blockless-after-blockless", "first-nested"]
+      }
+    ],
     'at-rule-no-unknown': null, // Handled by stylelint-scss at-rule-no-unknown
     'color-hex-length': 'long',
     'color-named': 'never',
     'declaration-no-important': true,
+    'block-closing-brace-newline-after': 'always',
     'max-nesting-depth': 3,
     'no-eol-whitespace': [
       true,
