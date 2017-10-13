@@ -7,6 +7,12 @@ module.exports = {
     'stylelint-order'
   ],
   'rules': {
+    "at-rule-empty-line-after": [
+      "always",
+      {
+        "ignoreAtRules": "else"
+      }
+    ],
     'at-rule-empty-line-before': [
       'always',
       {
