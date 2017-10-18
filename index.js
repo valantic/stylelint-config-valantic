@@ -11,14 +11,19 @@ module.exports = {
       'always',
       {
         ignoreAtRules: 'else',
-        "except": ["blockless-after-blockless", "first-nested"]
+        except: ['blockless-after-blockless', 'first-nested'],
+        ignore: ['after-comment']
       }
     ],
     'at-rule-no-unknown': null, // Handled by stylelint-scss at-rule-no-unknown
     'color-hex-length': 'long',
     'color-named': 'never',
     'declaration-no-important': true,
-    'block-closing-brace-newline-after': 'always',
+    'block-closing-brace-newline-after': [
+      'always', {
+        ignoreAtRules: [ 'if', 'else' ]
+      }
+    ],
     'max-nesting-depth': 3,
     'no-eol-whitespace': [
       true,
