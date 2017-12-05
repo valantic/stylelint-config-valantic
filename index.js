@@ -34,7 +34,7 @@ module.exports = {
     'selector-list-comma-newline-after': 'always',
     'selector-max-id': 0,
     'selector-class-pattern': [
-      /^((row)|(col-.*)|(spacing(-.*|$))|(align(--.*|$))|(container)|(container-fluid)|(focus)|((\.?[cel]-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z]+|[0-9]+))*)?(--([a-z]+|h[1-6])(-([a-z]+|[0-9]+))*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\(["a-z0-9]+\))?)?))+$/m,
+      /^((\.?[a-z]-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z]+|[0-9]+))*)?(--([a-z]+|h[1-6])(-([a-z]+|[0-9]+))*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\(["a-z0-9]+\))?)?)+$/m,
       {
         resolveNestedSelectors: true
       }
