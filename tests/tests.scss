@@ -3,6 +3,10 @@
   color: red; // This line should give error about named color
 }
 
+.foo-baa {
+
+}
+
 .c-block__element__element { // This line should give error about invalid class
   color: #000; // This line should give error about short color definitions
 }

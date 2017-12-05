@@ -34,7 +34,7 @@ module.exports = {
     'selector-list-comma-newline-after': 'always',
     'selector-max-id': 0,
     'selector-class-pattern': [
-      /^((\.?[a-z]-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z]+|[0-9]+))*)?(--([a-z]+|h[1-6])(-([a-z]+|[0-9]+))*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\(["a-z0-9]+\))?)?)+$/m,
+      /^((row)|(col-.*)|(spacing(-.*|$))|(align(--.*|$))|(container)|(container-fluid)|(focus)|((\.?[a-z][a-z]*-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z]+|[0-9]+))*)?(--([a-z]+|h[1-6])(-([a-z]+|[0-9]+))*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\(["a-z0-9]+\))?)?))+$/m,
       {
         resolveNestedSelectors: true
       }
@@ -108,6 +108,7 @@ module.exports = {
  c-advertisement-1__element
  c-advertisement__element-1--modifier
  c-advertisement-1__element-1--modifier-1
+ cc-foo
  row
  col-6
  align--left
@@ -119,7 +120,6 @@ module.exports = {
  c-block---foo
  c-block--element--foo
  c-block__element__element
- cc-foo
  c-block__element__element.c-block
  c-block__element.c-block__element__element
  c-block__element--modifier--modifier.c-block
