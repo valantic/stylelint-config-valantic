@@ -7,10 +7,23 @@ module.exports = {
     'stylelint-order'
   ],
   'rules': {
+    'at-rule-empty-line-before': [
+      'always',
+      {
+        ignoreAtRules: 'else',
+        except: ['blockless-after-blockless', 'first-nested'],
+        ignore: ['after-comment']
+      }
+    ],
     'at-rule-no-unknown': null, // Handled by stylelint-scss at-rule-no-unknown
     'color-hex-length': 'long',
     'color-named': 'never',
     'declaration-no-important': true,
+    'block-closing-brace-newline-after': [
+      'always', {
+        ignoreAtRules: [ 'if', 'else' ]
+      }
+    ],
     'max-nesting-depth': 3,
     'no-eol-whitespace': [
       true,
@@ -21,7 +34,7 @@ module.exports = {
     'selector-list-comma-newline-after': 'always',
     'selector-max-id': 0,
     'selector-class-pattern': [
-      /^((row)|(col-.*)|(spacing(-.*|$))|(align(--.*|$))|(container)|(container-fluid)|(focus)|((\.?[cel]-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z]+|[0-9]+))*)?(--([a-z]+|h[1-6])(-([a-z]+|[0-9]+))*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\(["a-z0-9]+\))?)?))+$/m,
+      /^((\.?[a-z]-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z]+|[0-9]+))*)?(--([a-z]+|h[1-6])(-([a-z]+|[0-9]+))*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\(["a-z0-9]+\))?)?)+$/m,
       {
         resolveNestedSelectors: true
       }
