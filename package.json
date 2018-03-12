@@ -1,7 +1,7 @@
 {
-  "name": "stylelint-config-movento",
-  "version": "2.2.1",
-  "description": "Default movento configuration for stylelint",
+  "name": "stylelint-config-valantic",
+  "version": "3.0.0",
+  "description": "Default valantic configuration for stylelint",
   "main": "index.js",
   "scripts": {
     "test": "stylelint 'tests/**/*.scss' --config index.js; exit 0",
@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.movento.com/movento-public/stylelint-config-movento.git"
+    "url": "https://github.com/valantic/stylelint-config-valantic.git"
   },
-  "author": "movento",
+  "author": "valantic",
   "license": "ISC",
   "dependencies": {
-    "stylelint": "^8.1.1",
-    "stylelint-config-standard": "^17.0.0",
-    "stylelint-scss": "^2.1.0",
-    "stylelint-order": "^0.7.0"
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^2.5.0",
+    "stylelint-order": "^0.8.1"
   },
   "devDependencies": {
+    "stylelint": "^9.1.1"
   }
 }
