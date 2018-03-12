@@ -10,7 +10,7 @@ $font-weight-light: 300 !default;
 
 // BEGIN-FREESTYLE-USAGE mediaqueries-breakpoints
 
-//** MOVENTO ADDED: XXS 0-480px
+//** valantic ADDED: XXS 0-480px
 $screen-xxs: 0 !default;
 $screen-xxs-min: $screen-xxs;
 
@@ -43,7 +43,7 @@ $screen-lg-min: $screen-lg !default;
 //** Deprecated `$screen-lg-desktop` as of v3.0.1
 $screen-lg-desktop: $screen-lg-min !default;
 
-//** MOVENTO ADDED: XL 1600 - infinite
+//** valantic ADDED: XL 1600 - infinite
 $screen-xl: 1600px !default;
 $screen-xl-min: $screen-xl;
 $screen-xl-desktop: $screen-xl-min !default;

@@ -18,7 +18,7 @@
   @include clearfix;
 }
 
-//***** Customized by Movento
+//***** Customized by valantic
 // Generate the extra small columns
 @mixin make-xxs-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
@@ -38,7 +38,7 @@
   right: percentage(($columns / $grid-columns));
 }
 
-//***** Customized by Movento
+//***** Customized by valantic
 // Generate the small columns
 @mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
@@ -154,7 +154,7 @@
 
 
 
-//***** Customized by Movento
+//***** Customized by valantic
 // Generate the large columns
 @mixin make-xl-column($columns, $gutter: $grid-gutter-width) {
   position: relative;
