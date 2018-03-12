@@ -14,11 +14,11 @@
   "author": "movento",
   "license": "ISC",
   "dependencies": {
-    "stylelint": "^8.1.1",
-    "stylelint-config-standard": "^17.0.0",
-    "stylelint-scss": "^2.1.0",
-    "stylelint-order": "^0.7.0"
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^2.5.0",
+    "stylelint-order": "^0.8.1"
   },
   "devDependencies": {
+    "stylelint": "^9.1.1"
   }
 }
