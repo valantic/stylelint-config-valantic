@@ -1,6 +1,4 @@
-# SCSS
-
-> **Changes to the Frontend configs repo or project specific settings are only allowed in agreement with the frontend  or project team.**
+# valantic stylelint configuration
 
 To ensure a high an consistent code quality for SCSS/CSS we use stylelint.
 
@@ -8,14 +6,14 @@ To ensure a high an consistent code quality for SCSS/CSS we use stylelint.
 
 ## Version
 
-Our config is currently optimized for Stylelint 8.1.1 To check for updates, see [https://github.com/stylelint/stylelint/releases](https://github.com/stylelint/stylelint/releases)
+Our config is currently optimized for Stylelint 9.1.1 To check for updates, see [https://github.com/stylelint/stylelint/releases](https://github.com/stylelint/stylelint/releases)
 
 **Note that Stylelint is not backwards compatible and linting will fail if the configuration contains settings, which are not known to the current version!**
 
 ## Installing stylelint-config-valantic package
 
 ```shell
-$ npm install --save-dev git+https://github.com/valantic/stylelint-config-valantic.git#2.2.1
+$ npm install --save-dev stylelint git+https://github.com/valantic/stylelint-config-valantic.git#2.2.1
 ```
 
 ### Create config
@@ -24,7 +22,10 @@ In the root of your project add a .stylelintrc file and add the following conten
 
 ```
 {
-  "extends": "stylelint-config-valantic"
+  "extends": "stylelint-config-valantic",
+  "rules": {
+    // Project related rules
+  }
 }
 
 ```
@@ -50,7 +51,7 @@ You can also lint your code from the console. To do this, add a script to your `
 Now you can execute the linter with the following command.
 
 ```
-$ npm run stylelint <app|file.js>
+$ npm run stylelint
 ```
 
 ### Ember.js
@@ -61,6 +62,10 @@ $ npm run stylelint <app|file.js>
 $ ember install ember-cli-stylelint
 ```
 
-**In case you get errors like "Undefined rule ..." you may have a version conflict between Stylelint and this configuration. Make sure you're using the above mentioned Stylelint version.**
-
 For more information visit the ember-cli-stylelint repository: https://github.com/billybonks/ember-cli-stylelint
+
+## Know issues
+
+### Undefined rule
+
+In case you get errors like "Undefined rule ..." you may have a version conflict between Stylelint and this configuration. Make sure you're using the above mentioned Stylelint version.
