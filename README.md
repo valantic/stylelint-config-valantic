@@ -13,7 +13,7 @@ Our config is currently optimized for Stylelint 9.1.1 To check for updates, see 
 ## Installing stylelint-config-valantic package
 
 ```shell
-$ npm install --save-dev stylelint git+https://github.com/valantic/stylelint-config-valantic.git#3.0.0
+$ npm install --save-dev git+https://github.com/valantic/stylelint-config-valantic.git#3.0.0 stylelint
 ```
 
 ### Create config
