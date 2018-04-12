@@ -21,7 +21,7 @@ module.exports = {
     'declaration-no-important': true,
     'block-closing-brace-newline-after': [
       'always', {
-        ignoreAtRules: [ 'if', 'else' ]
+        ignoreAtRules: ['if', 'else']
       }
     ],
     'max-nesting-depth': 3,
@@ -50,12 +50,18 @@ module.exports = {
       },
       {
         type: 'at-rule',
-        name: 'include'
+        name: 'include',
+        hasBlock: false
       },
       'declarations',
       {
         type: 'at-rule',
         name: 'media',
+        hasBlock: true
+      },
+      {
+        type: 'at-rule',
+        name: 'include',
         hasBlock: true
       },
       'rules'
