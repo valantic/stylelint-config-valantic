@@ -1,10 +1,10 @@
 {
   "name": "stylelint-config-valantic",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Default valantic configuration for stylelint",
   "main": "index.js",
   "scripts": {
-    "test": "stylelint 'tests/**/*.scss' --config index.js; exit 0",
+    "test": "stylelint 'tests/tests.scss' --config index.js; exit 0",
     "stylelint": "stylelint -v"
   },
   "repository": {
@@ -15,10 +15,10 @@
   "license": "ISC",
   "dependencies": {
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-scss": "^2.5.0",
+    "stylelint-scss": "^3.0.1",
     "stylelint-order": "^0.8.1"
   },
   "devDependencies": {
-    "stylelint": "^9.1.1"
+    "stylelint": "^9.2.0"
   }
 }
