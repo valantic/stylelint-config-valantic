@@ -3,6 +3,14 @@
   color: red; // This line should give error about named color
 }
 
+.c-component--h1 { // This line should give error about invalid class
+  color: #ffffff;
+}
+
+.c-component1 { // This line should give error about invalid class
+  color: #ffffff;
+}
+
 .foo-baa {
 
 }
