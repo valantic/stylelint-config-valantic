@@ -13,7 +13,7 @@ Our config is currently optimized for Stylelint 9.1.1 To check for updates, see 
 ## Installing stylelint-config-valantic package
 
 ```shell
-$ npm install --save-dev git+https://github.com/valantic/stylelint-config-valantic.git#3.2.0 stylelint
+$ npm install --save-dev git+https://github.com/valantic/stylelint-config-valantic.git#3.3.0 stylelint
 ```
 
 ### Create config
@@ -56,7 +56,7 @@ $ npm run stylelint
 
 ### Ember.js
 
-**NOTE: currently ember-cli-stylelint uses Stylelint 7.x.x. Unfortunately Stylelint is not backwards compatible and will throw errors on linting configurations, which are unknown to the version (which is the case for the valantic config 3.2.0 and Stylelint < 9.1.1)**
+**NOTE: currently ember-cli-stylelint uses Stylelint 7.x.x. Unfortunately Stylelint is not backwards compatible and will throw errors on linting configurations, which are unknown to the version (which is the case for the valantic config 3.3.0 and Stylelint < 9.1.1)**
 
 ```
 $ ember install ember-cli-stylelint
