@@ -6,14 +6,14 @@ To ensure a high an consistent code quality for SCSS/CSS we use stylelint.
 
 ## Version
 
-Our config is currently optimized for Stylelint 9.1.1 To check for updates, see [https://github.com/stylelint/stylelint/releases](https://github.com/stylelint/stylelint/releases)
+Our config is currently optimized for Stylelint 9.9.0 To check for updates, see [https://github.com/stylelint/stylelint/releases](https://github.com/stylelint/stylelint/releases)
 
 **Note that Stylelint is not backwards compatible and linting will fail if the configuration contains settings, which are not known to the current version!**
 
 ## Installing stylelint-config-valantic package
 
 ```shell
-$ npm install --save-dev git+https://github.com/valantic/stylelint-config-valantic.git#3.3.0 stylelint
+npm install stylelint-config-valantic stylelint --save-dev
 ```
 
 ### Create config
@@ -53,16 +53,6 @@ Now you can execute the linter with the following command.
 ```
 $ npm run stylelint
 ```
-
-### Ember.js
-
-**NOTE: currently ember-cli-stylelint uses Stylelint 7.x.x. Unfortunately Stylelint is not backwards compatible and will throw errors on linting configurations, which are unknown to the version (which is the case for the valantic config 3.3.0 and Stylelint < 9.1.1)**
-
-```
-$ ember install ember-cli-stylelint
-```
-
-For more information visit the ember-cli-stylelint repository: https://github.com/billybonks/ember-cli-stylelint
 
 ## Know issues
 
