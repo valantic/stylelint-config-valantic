@@ -20,8 +20,8 @@
   ],
   "dependencies": {
     "stylelint-config-standard": "^18.3.0",
-    "stylelint-scss": "^3.9.1",
-    "stylelint-order": "^3.0.1"
+    "stylelint-order": "^3.1.0",
+    "stylelint-scss": "^3.10.0"
   },
   "devDependencies": {
     "stylelint": "^10.1.0"
