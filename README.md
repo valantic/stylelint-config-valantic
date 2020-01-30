@@ -6,7 +6,7 @@ To ensure a high an consistent code quality for SCSS/CSS we use stylelint.
 
 ## Version
 
-Our config is currently optimized for Stylelint 10.1.0 To check for updates, see [https://github.com/stylelint/stylelint/releases](https://github.com/stylelint/stylelint/releases)
+Our config is currently optimized for Stylelint 13.0.0 To check for updates, see [https://github.com/stylelint/stylelint/releases](https://github.com/stylelint/stylelint/releases)
 
 **Note that Stylelint is not backwards compatible and linting will fail if the configuration contains settings, which are not known to the current version!**
 
