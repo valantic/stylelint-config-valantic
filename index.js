@@ -15,13 +15,19 @@ module.exports = {
         ignore: ['after-comment']
       }
     ],
-    'at-rule-no-unknown': null, // Handled by stylelint-scss at-rule-no-unknown
-    'color-hex-length': 'long',
-    'color-named': 'never',
-    'declaration-no-important': true,
+    'at-rule-no-unknown': null, // Handled by stylelint-scss at-rule-no-unknown,
     'block-closing-brace-newline-after': [
       'always', {
         ignoreAtRules: ['if', 'else']
+      }
+    ],
+    'color-hex-length': 'long',
+    'color-named': 'never',
+    'declaration-no-important': true
+    'length-zero-no-unit': [
+      true,
+      {
+        ignore: ["custom-properties"] // Allow 0px for variables and calc().
       }
     ],
     'max-nesting-depth': 4,
