@@ -24,7 +24,7 @@ module.exports = {
         ignoreAtRules: ['if', 'else']
       }
     ],
-    'max-nesting-depth': 3,
+    'max-nesting-depth': 4,
     'no-eol-whitespace': [
       true,
       {
