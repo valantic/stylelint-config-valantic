@@ -23,7 +23,7 @@ module.exports = {
     ],
     'color-hex-length': 'long',
     'color-named': 'never',
-    'declaration-no-important': true
+    'declaration-no-important': true,
     'length-zero-no-unit': [
       true,
       {
