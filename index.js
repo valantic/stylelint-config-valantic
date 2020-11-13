@@ -71,7 +71,8 @@ module.exports = {
         hasBlock: true
       },
       'rules'
-    ]
+    ],
+    'value-keyword-case': null,
   }
 };
 
