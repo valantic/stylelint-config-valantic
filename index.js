@@ -4,7 +4,7 @@ module.exports = {
   extends: 'stylelint-config-standard',
   plugins: [
     'stylelint-scss',
-    'stylelint-order'
+    'stylelint-order',
   ],
   rules: {
     'at-rule-empty-line-before': [
@@ -12,14 +12,14 @@ module.exports = {
       {
         ignoreAtRules: 'else',
         except: ['blockless-after-blockless', 'first-nested'],
-        ignore: ['after-comment']
-      }
+        ignore: ['after-comment'],
+      },
     ],
     'at-rule-no-unknown': null, // Handled by stylelint-scss at-rule-no-unknown,
     'block-closing-brace-newline-after': [
       'always', {
-        ignoreAtRules: ['if', 'else']
-      }
+        ignoreAtRules: ['if', 'else'],
+      },
     ],
     'color-hex-length': 'long',
     'color-named': 'never',
@@ -27,23 +27,29 @@ module.exports = {
     'length-zero-no-unit': [
       true,
       {
-        ignore: ["custom-properties"] // Allow 0px for variables and calc().
-      }
+        ignore: ["custom-properties"], // Allow 0px for variables and calc().
+      },
     ],
     'max-nesting-depth': 4,
     'no-eol-whitespace': [
       true,
       {
-        ignore: ['empty-lines']
-      }
+        ignore: ['empty-lines'],
+      },
     ],
-    'selector-list-comma-newline-after': 'always',
-    'selector-max-id': 0,
     'selector-class-pattern': [
       /^((row)|(col-.*)|(spacing(-.*|$))|(align(--.*|$))|(container)|(container-fluid)|(focus)|((\.?[a-z][a-z]*-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z0-9]+))*)?(--([a-z][a-z]+|h[1-6]|i)(-[a-z0-9]+)*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\(["a-z0-9]+\))?)?))+$/m,
       {
-        resolveNestedSelectors: true
-      }
+        resolveNestedSelectors: true,
+      },
+    ],
+    'selector-list-comma-newline-after': 'always',
+    'selector-max-id': 0,
+    'selector-type-no-unknown': [
+      2,
+      {
+        ignore: ["custom-elements"],
+      },
     ],
     'scss/at-rule-no-unknown': true,
     'scss/double-slash-comment-whitespace-inside': 'always',
@@ -52,28 +58,28 @@ module.exports = {
       'dollar-variables',
       {
         type: 'at-rule',
-        name: 'extend'
+        name: 'extend',
       },
       {
         type: 'at-rule',
         name: 'include',
-        hasBlock: false
+        hasBlock: false,
       },
       'declarations',
       {
         type: 'at-rule',
         name: 'media',
-        hasBlock: true
+        hasBlock: true,
       },
       {
         type: 'at-rule',
         name: 'include',
-        hasBlock: true
+        hasBlock: true,
       },
-      'rules'
+      'rules',
     ],
     'value-keyword-case': null,
-  }
+  },
 };
 
 /**
