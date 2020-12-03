@@ -46,7 +46,7 @@ module.exports = {
     'selector-list-comma-newline-after': 'always',
     'selector-max-id': 0,
     'selector-type-no-unknown': [
-      2,
+      true,
       {
         ignore: ["custom-elements"],
       },
