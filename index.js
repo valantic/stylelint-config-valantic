@@ -31,6 +31,7 @@ module.exports = {
       },
     ],
     'max-nesting-depth': 4,
+    'no-descending-specificity': false,
     'no-eol-whitespace': [
       true,
       {

@@ -60,27 +60,27 @@
   color: #000000;
 }
 
-.c-block {
+.c-block--variant-2 {
   color: #000000 !important; // This line should give error about important
 }
 
-.c-block {
+.c-block--variant-3 {
   color: #000000; background-color: #000000; // This line should give error about multiple properties on one line
 }
 
 
 
 
-// This line above should give error because of to many lines
-.c-block {
+// This line above should give error because of too many lines
+.c-block--variant-4 {
   color: #000000;
 }
 
-.c-block, .c-block { // This line should give error about multiple selectors on one line
+.c-block--variant-6, .c-block--variant-7 { // This line should give error about multiple selectors on one line
   color: #000000;
 }
 
-.c-block {
+.c-block--variant-8 {
   &:before { // This line should give error about invalid pseudo selector (::)
     color: #000000;
   }
@@ -116,3 +116,6 @@
     }
   }
 }
+
+#container a { top: 10px; } // no-descending-specificity
+a { top: 0; }
