@@ -119,3 +119,9 @@
 
 #container a { top: 10px; } // no-descending-specificity
 a { top: 0; }
+
+@property --e-progress-ring__progress { // Should not throw an error for scss/at-rule-no-unknown
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
