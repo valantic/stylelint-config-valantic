@@ -52,7 +52,12 @@ module.exports = {
         ignore: ["custom-elements"],
       },
     ],
-    'scss/at-rule-no-unknown': true,
+    'scss/at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['property']
+      }
+    ],
     'scss/double-slash-comment-whitespace-inside': 'always',
     'order/order': [
       'custom-properties',
