@@ -125,3 +125,24 @@ a { top: 0; }
   initial-value: 0;
   inherits: false;
 }
+
+.c-grid-areas--splitted-columns {
+  grid-template-areas:
+    "a a a"
+    "b b a";
+}
+
+.c-grid-areas--unequal-columns {
+  grid-template-areas:
+    "a a a"
+    "b b b b";
+}
+
+.c-grid-areas--empty {
+  grid-template-areas: "";
+}
+
+.c-duplicated-custom-properties {
+  --custom-property: #ffffff;
+  --custom-property: #cccccc;
+}
