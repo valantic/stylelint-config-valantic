@@ -146,3 +146,7 @@ a { top: 0; }
   --custom-property: #ffffff;
   --custom-property: #cccccc;
 }
+
+.c-attribute-selector-with-missing-quotes[target=_blank] {
+  color: #000000;
+}
