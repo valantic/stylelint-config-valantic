@@ -4,7 +4,7 @@
   "description": "Default valantic configuration for stylelint.",
   "main": "index.js",
   "scripts": {
-    "test": "stylelint 'tests/tests.scss' --config index.js; exit 0",
+    "test": "stylelint 'tests/tests.scss' --custom-syntax postcss-scss --config index.js; exit 0",
     "stylelint": "stylelint -v"
   },
   "repository": {
@@ -19,14 +19,14 @@
     "eslint-config"
   ],
   "dependencies": {
-    "stylelint-config-standard": "^22.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.19.0"
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.0.0"
   },
   "devDependencies": {
-    "stylelint": "13.13.0"
+    "stylelint": "14.1.0"
   },
   "peerDependencies": {
-    "stylelint": "^13.13.0"
+    "stylelint": "^14.1.0"
   }
 }
