@@ -1,7 +1,19 @@
 'use strict';
 
 module.exports = {
-  extends: 'stylelint-config-standard',
+  extends: [
+    'stylelint-config-standard',
+    // Needed to be able to parse vue files, see https://github.com/ota-meshi/stylelint-config-html#book-usage
+    'stylelint-config-html/vue'
+  ],
+  overrides: [
+    {
+      // Needed to be able to parse scss files, as we don't want to use the stylelint-config-standard-scss
+      // see https://stylelint.io/migration-guide/to-14/
+      files: '**/*.scss',
+      customSyntax: "postcss-scss",
+    },
+  ],
   plugins: [
     'stylelint-scss',
     'stylelint-order',
@@ -87,6 +99,35 @@ module.exports = {
       'rules',
     ],
     'value-keyword-case': null,
+
+    // additional rules adjustments needed since stylelint 14.x to work with our conventions
+    'string-quotes': 'single',
+    'color-function-notation': 'legacy',
+    'value-no-vendor-prefix': [
+      true,
+      {
+        ignoreValues: ['box']
+      }
+    ],
+    'property-no-vendor-prefix': [
+      true,
+      {
+        ignoreProperties: ['appearance', 'text-decoration-skip']
+      }
+    ],
+    'selector-no-vendor-prefix': [
+      true,
+      {
+        ignoreSelectors: ['::-webkit-input-placeholder', ':-moz-placeholder', 'box']
+      }
+    ],
+    'custom-property-pattern': null,
+    'max-line-length': [
+      120,
+      {
+        ignore: ["comments"]
+      }
+    ],
   },
 };
 

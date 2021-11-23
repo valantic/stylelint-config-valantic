@@ -1,5 +1,7 @@
 ### Next
 
+- (Bugfix) Uses stylelint-config-standard instead of stylelint-config-standard-scss to better match our conventions
+
 ### 6.5.0
 - (Update) Updates dependencies
 
