@@ -19,7 +19,7 @@
   to be released version
 * Change the Version in the file [package.json](package.json)
 * Run `npm i` to update the version in the file [package-lock.json](package-lock.json)  
-* Create a Git Tag with the to be released version number ` git tag v6.5.0`
+* Create a Git Tag with the to be released version number ` git tag 6.5.0`
 * Commit and Push the changes to the Release branch (Make sure to also push Tags)
 * Switch to the `master` branch
 * Merge the release branch into `master` and push the changes
