@@ -1,6 +1,7 @@
 ### Next
 
-* (Update) Updates dependencies
+### 6.5.0
+- (Update) Updates dependencies
 
 ### 6.4.0
 - (Feature) Adds new linting rules from stylelint 13.13.0
