@@ -1,4 +1,5 @@
 ### Next
+- (Change) Loosening 'max-line-length' to allow a length of 130 characters
 
 ### 6.5.1
 

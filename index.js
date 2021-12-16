@@ -123,7 +123,7 @@ module.exports = {
     ],
     'custom-property-pattern': null,
     'max-line-length': [
-      120,
+      130,
       {
         ignore: ["comments"]
       }
