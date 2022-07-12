@@ -1,4 +1,4 @@
-### Next
+### 7.0.0
 - (Change) Loosening 'max-line-length' to allow a length of 130 characters.
 - (Change) Loosening 'declaration-block-no-redundant-longhand-properties' to allow grid-template with redundant longhand properties.
 - (Breaking) Requires stylelint-scss installed separately.
