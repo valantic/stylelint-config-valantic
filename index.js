@@ -35,6 +35,12 @@ module.exports = {
     ],
     'color-hex-length': 'long',
     'color-named': 'never',
+    'declaration-block-no-redundant-longhand-properties': [
+      true,
+      {
+        ignoreShorthands: ['grid-template']
+      }
+    ],
     'declaration-no-important': true,
     'length-zero-no-unit': [
       true,

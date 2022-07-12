@@ -1,15 +1,17 @@
 ### Next
-- (Change) Loosening 'max-line-length' to allow a length of 130 characters
+- (Change) Loosening 'max-line-length' to allow a length of 130 characters.
+- (Change) Loosening 'declaration-block-no-redundant-longhand-properties' to allow grid-template with redundant longhand properties.
+- (Breaking) Requires stylelint-scss installed separately.
 
 ### 6.5.1
 
-- (Bugfix) Uses stylelint-config-standard instead of stylelint-config-standard-scss to better match our conventions
+- (Bugfix) Uses stylelint-config-standard instead of stylelint-config-standard-scss to better match our conventions.
 
 ### 6.5.0
-- (Update) Updates dependencies
+- (Update) Updates dependencies.
 
 ### 6.4.0
-- (Feature) Adds new linting rules from stylelint 13.13.0
+- (Feature) Adds new linting rules from stylelint 13.13.0.
 
 ### 6.3.0
  - (Feature) Adds support for @property at rule.
