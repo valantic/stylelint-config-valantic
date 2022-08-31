@@ -1,6 +1,4 @@
 module.exports = [
-    'color',
-
     'background',
     'background-color',
     'background-image',

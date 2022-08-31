@@ -1,3 +1,6 @@
+### 7.1.2
+- (Change) Moves `color` to `typography` section for property order.
+
 ### 7.1.1
 - (Change) Weakens class regex to allow `.typo--` classes.
 

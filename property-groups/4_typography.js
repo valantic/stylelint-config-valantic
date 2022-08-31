@@ -1,4 +1,6 @@
 module.exports = [
+    'color',
+
     'font',
     'font-family',
     'font-size',
