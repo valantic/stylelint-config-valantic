@@ -42,6 +42,7 @@ module.exports = {
       }
     ],
     'declaration-no-important': true,
+    'function-no-unknown': null, // Accept SCSS functions.
     'length-zero-no-unit': [
       true,
       {
@@ -66,6 +67,7 @@ module.exports = {
     ],
     'selector-list-comma-newline-after': 'always',
     'selector-max-id': 0,
+    'selector-not-notation': null, // IE11 does not support selector list in :not().
     'selector-type-no-unknown': [
       true,
       {
