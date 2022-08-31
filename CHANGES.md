@@ -1,3 +1,6 @@
+### 7.1.3
+- (Change) Moves `background` properties after 'specific', `border` and `fill` properties.
+
 ### 7.1.2
 - (Change) Moves `color` to `typography` section for property order.
 

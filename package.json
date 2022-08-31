@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-valantic",
-  "version": "7.1.2",
+  "version": "7.1.3",
   "description": "Default valantic configuration for stylelint.",
   "main": "index.js",
   "scripts": {
