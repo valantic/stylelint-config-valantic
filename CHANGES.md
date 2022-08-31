@@ -1,5 +1,8 @@
+### 7.1.1
+- (Change) Weakens class regex to allow `.typo--` classes.
+
 ### 7.1.0
-- (Feature) Adds support for --fix and unified property order
+- (Feature) Adds support for --fix and unified property order.
 
 ### 7.0.0
 - (Change) Loosening 'max-line-length' to allow a length of 130 characters.
