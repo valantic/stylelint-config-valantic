@@ -18,10 +18,10 @@ npm install stylelint-config-valantic stylelint --save-dev
 
 ### Create config
 
-In the root of your project add a .stylelintrc file and add the following content to enable the valantic config for your project.
+In the root of your project add a `.stylelintrc.js` file and add the following content to enable the valantic config for your project.
 
-```
-{
+```js
+module.exports = {
   "extends": "stylelint-config-valantic",
   "rules": {
     // Project related rules
@@ -30,9 +30,45 @@ In the root of your project add a .stylelintrc file and add the following conten
 
 ```
 
+### Create --fix config
+
+It is recommended to have a separate `--fix` config, that uses some additional rules (e.g. for property order) to hide non-blocking issues from the user but auto apply them on git hooks.
+
+1. Create an additional `.stylelint.fix.js` file
+
+```js
+module.exports = {
+  extends: [
+    'stylelint-config-valantic/fix',
+    './.stylelintrc.js'
+  ],
+};
+```
+
+2. Add a `package.json` script, if you want to test manually.
+
+```json
+{
+  "stylelint": "stylelint --cache 'src/**/*.?(vue|scss)'",
+  "stylelint:fix": "npm run stylelint -- --cache=false --config .stylelintrc.fix.js --fix"
+}
+```
+
+3. Assign the `--fix` config for `lint-staged`.
+
+```json
+{
+  "lint-staged": {
+    "*.{css,vue,scss}": [
+      "stylelint --config .stylelintrc.fix.js --fix"
+    ]
+  }
+}
+```
+
 ## Use
 
-Now your ready to enable Stylelint in your editor or use it on the command line!
+Now you're ready to enable Stylelint in your editor or use it on the command line!
 
 ### PhpStorm
 
