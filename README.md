@@ -45,6 +45,21 @@ module.exports = {
 };
 ```
 
+**NOTE: using `--config` in the fix command will disable the auto-merging of nested stylelint configurations.** It therefore is recommended to move folder specific conigurations to the `overrides` section of the base configuration.
+
+```js
+module.exports = {
+  "overrides": [
+    {
+      "files": ["src/styleguide/routes/**/*.*"],
+      "rules": {
+        'selector-class-pattern': null,
+      }
+    }
+  ]
+};
+```
+
 2. Add a `package.json` script, if you want to test manually.
 
 ```json

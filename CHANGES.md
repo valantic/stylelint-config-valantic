@@ -1,3 +1,6 @@
+### 7.1.4
+- (Change) Extends documentation with information on how to handle folder specific configurations.
+
 ### 7.1.3
 - (Change) Moves `background` properties after 'specific', `border` and `fill` properties.
 
