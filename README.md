@@ -34,7 +34,7 @@ module.exports = {
 
 It is recommended to have a separate `--fix` config, that uses some additional rules (e.g. for property order) to hide non-blocking issues from the user but auto apply them on git hooks.
 
-1. Create an additional `.stylelint.fix.js` file
+1. Create an additional `.stylelintrc.fix.js` file
 
 ```js
 module.exports = {
@@ -49,10 +49,10 @@ module.exports = {
 
 ```js
 module.exports = {
-  "overrides": [
+  overrides: [
     {
-      "files": ["src/styleguide/routes/**/*.*"],
-      "rules": {
+      files: ['src/styleguide/routes/**/*.*'],
+      rules: {
         'selector-class-pattern': null,
       }
     }
