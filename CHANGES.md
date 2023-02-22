@@ -1,3 +1,6 @@
+### 7.1.5
+- (Change) Switches 'dollar-variables' and 'custom-properties' on 'order/order' to allow usage of scss variables in custom properties.
+
 ### 7.1.4
 - (Change) Extends documentation with information on how to handle folder specific configurations.
 
