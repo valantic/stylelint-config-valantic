@@ -82,8 +82,8 @@ module.exports = {
     ],
     'scss/double-slash-comment-whitespace-inside': 'always',
     'order/order': [
-      'custom-properties',
       'dollar-variables',
+      'custom-properties',
       {
         type: 'at-rule',
         name: 'extend',
