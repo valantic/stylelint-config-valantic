@@ -1,3 +1,6 @@
+### Next
+- (Breaking) Requires stylelint version 15. (Check Migration guide if you need to update stylelint: https://github.com/stylelint/stylelint/blob/main/docs/migration-guide/to-15.md)
+
 ### 7.1.5
 - (Change) Switches 'dollar-variables' and 'custom-properties' on 'order/order' to allow usage of scss variables in custom properties.
 
