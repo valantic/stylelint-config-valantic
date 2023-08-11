@@ -1,11 +1,6 @@
 'use strict';
 
 module.exports = {
-  extends: [
-    'stylelint-config-standard',
-    // Needed to be able to parse vue files, see https://github.com/ota-meshi/stylelint-config-html#book-usage
-    'stylelint-config-html/vue'
-  ],
   overrides: [
     {
       // Needed to be able to parse scss files, as we don't want to use the stylelint-config-standard-scss
@@ -13,6 +8,11 @@ module.exports = {
       files: '**/*.scss',
       customSyntax: "postcss-scss",
     },
+    {
+      "files": ["*.css"],
+      // 'stylelint-config-html/vue: Needed to be able to parse vue files, see https://github.com/ota-meshi/stylelint-config-html#book-usage
+      "extends": [ 'stylelint-config-standard', 'stylelint-config-html/vue']
+    }
   ],
   plugins: [
     'stylelint-scss',
