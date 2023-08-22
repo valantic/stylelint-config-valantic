@@ -1,4 +1,4 @@
-### Next
+### 8.0.0
 - (Breaking) Requires stylelint version 15. (Check Migration guide if you need to update stylelint: https://github.com/stylelint/stylelint/blob/main/docs/migration-guide/to-15.md)
 
 ### 7.1.5
