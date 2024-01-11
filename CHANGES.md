@@ -1,3 +1,6 @@
+### Next
+- (Breaking) Requires stylelint version 16. (Check Migration guide https://github.com/stylelint/stylelint/blob/16.0.0/docs/migration-guide/to-16.md)
+
 ### 8.0.1
 - (Bugfix) Fixes typo for repository in package.json.
 

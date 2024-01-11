@@ -28,11 +28,6 @@ module.exports = {
       },
     ],
     'at-rule-no-unknown': null, // Handled by stylelint-scss at-rule-no-unknown,
-    'block-closing-brace-newline-after': [
-      'always', {
-        ignoreAtRules: ['if', 'else'],
-      },
-    ],
     'color-hex-length': 'long',
     'color-named': 'never',
     'declaration-block-no-redundant-longhand-properties': [
@@ -51,12 +46,6 @@ module.exports = {
     ],
     'max-nesting-depth': 4,
     'no-descending-specificity': null,
-    'no-eol-whitespace': [
-      true,
-      {
-        ignore: ['empty-lines'],
-      },
-    ],
     'no-irregular-whitespace': true,
     'selector-attribute-quotes': 'always',
     'selector-class-pattern': [
@@ -65,7 +54,6 @@ module.exports = {
         resolveNestedSelectors: true,
       },
     ],
-    'selector-list-comma-newline-after': 'always',
     'selector-max-id': 0,
     'selector-not-notation': null, // IE11 does not support selector list in :not().
     'selector-type-no-unknown': [
@@ -108,8 +96,6 @@ module.exports = {
     ],
     'value-keyword-case': null,
 
-    // additional rules adjustments needed since stylelint 14.x to work with our conventions
-    'string-quotes': 'single',
     'color-function-notation': 'legacy',
     'value-no-vendor-prefix': [
       true,
@@ -130,12 +116,6 @@ module.exports = {
       }
     ],
     'custom-property-pattern': null,
-    'max-line-length': [
-      130,
-      {
-        ignore: ["comments"]
-      }
-    ],
   },
 };
 
