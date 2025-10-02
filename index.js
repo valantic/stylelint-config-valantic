@@ -97,6 +97,7 @@ module.exports = {
     'value-keyword-case': null,
 
     'color-function-notation': 'legacy',
+    'color-function-alias-notation': 'with-alpha',
     'value-no-vendor-prefix': [
       true,
       {
