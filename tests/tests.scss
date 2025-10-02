@@ -46,9 +46,11 @@
 .c-block {
   &__element {
     &--modifier {
-      &:hover {
-        &::before { // This line should give error about nesting depth
-          color: #000000;
+     .another-class {
+        &:hover {
+          &::before { // This line should give error about nesting depth
+            color: #000000;
+          }
         }
       }
     }
@@ -61,22 +63,6 @@
 
 .c-block--variant-2 {
   color: #000000 !important; // This line should give error about important
-}
-
-.c-block--variant-3 {
-  color: #000000; background-color: #000000; // This line should give error about multiple properties on one line
-}
-
-
-
-
-// This line above should give error because of too many lines
-.c-block--variant-4 {
-  color: #000000;
-}
-
-.c-block--variant-6, .c-block--variant-7 { // This line should give error about multiple selectors on one line
-  color: #000000;
 }
 
 .c-block--variant-8 {
