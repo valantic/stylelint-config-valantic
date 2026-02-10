@@ -1,3 +1,6 @@
+### 10.0.0
+- (Breaking) Requires stylelint version 17. (Check Migration guide https://github.com/stylelint/stylelint/blob/17.1.1/docs/migration-guide/to-17.md)
+
 ### 9.1.0
 - (Change) Introduces new rule for 'color-function-alias-notation' set to 'with-alpha'.
 - (Change) Updates dependencies.
