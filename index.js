@@ -101,13 +101,13 @@ module.exports = {
     'value-no-vendor-prefix': [
       true,
       {
-        ignoreValues: ['box']
+        ignoreValues: ['webkit-box']
       }
     ],
     'property-no-vendor-prefix': [
       true,
       {
-        ignoreProperties: ['appearance', 'text-decoration-skip']
+        ignoreProperties: ['/^(-webkit-|-moz-)appearance$/', '/^(-webkit-|-moz-)text-decoration-skip$/']
       }
     ],
     'selector-no-vendor-prefix': [
