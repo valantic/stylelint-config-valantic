@@ -19,6 +19,7 @@ module.exports = {
     'stylelint-order',
   ],
   rules: {
+    'declaration-property-value-no-unknown': null,
     'at-rule-empty-line-before': [
       'always',
       {
