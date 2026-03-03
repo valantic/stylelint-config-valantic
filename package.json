@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-valantic",
-  "version": "10.0.0",
+  "version": "10.1.0",
   "description": "Default valantic configuration for stylelint.",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
     "stylelint-scss": "^7.0.0"
   },
   "devDependencies": {
-    "stylelint": "^17.1.1"
+    "stylelint": "^17.4.0"
   },
   "peerDependencies": {
     "stylelint": "^17.1.1"
