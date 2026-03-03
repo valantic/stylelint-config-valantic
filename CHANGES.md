@@ -1,3 +1,7 @@
+### 10.1.0
+- (Change) Update stylelint to version 17.4.0.
+- (Change) Remove 'declaration-property-value-no-unknown' rule.
+
 ### 10.0.0
 - (Breaking) Requires stylelint version 17. (Check Migration guide https://github.com/stylelint/stylelint/blob/17.1.1/docs/migration-guide/to-17.md)
 
