@@ -1,3 +1,8 @@
+### Next
+- (Change) Added a `files` allow-list to `package.json` (and removed the now-redundant `.npmignore`) so the published
+  package only ships `index.js`, `fix.js`, `property-groups/`, `package.json`, `LICENSE` and `README.md` — dev/test
+  files (`tests/`, docs) are no longer installed by consumers.
+
 ### 10.1.0
 - (Change) Update stylelint to version 17.4.0.
 - (Change) Remove 'declaration-property-value-no-unknown' rule.

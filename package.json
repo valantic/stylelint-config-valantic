@@ -3,6 +3,11 @@
   "version": "10.1.0",
   "description": "Default valantic configuration for stylelint.",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "fix.js",
+    "property-groups"
+  ],
   "scripts": {
     "test": "stylelint 'tests/*.{css,scss}' --custom-syntax postcss-scss --config index.js",
     "stylelint": "stylelint -v"
