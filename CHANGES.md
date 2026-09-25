@@ -1,4 +1,6 @@
 ### Next
+- (Change) Added `.github/workflows/test.yml` (previously missing), a "CI Test" workflow running on
+  `actions/checkout@v7` / `actions/setup-node@v7` with Node 25.
 - (Change) Added `.github/PULL_REQUEST_TEMPLATE.md` (previously missing), matching the streamlined, checklist-free
   template used across other valantic shared-frontend repos.
 - (Change) Added a `files` allow-list to `package.json` (and removed the now-redundant `.npmignore`) so the published
