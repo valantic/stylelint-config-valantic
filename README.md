@@ -1,24 +1,32 @@
+<div align="center">
+
+![valantic stylelint-config-valantic banner](.github/assets/banner.jpeg)
+
 # valantic stylelint configuration
+
+**Default valantic configuration for stylelint.**
+
+[**Report an Issue**](https://github.com/valantic/stylelint-config-valantic/issues/new) ·
+[**Request a Feature**](https://github.com/valantic/stylelint-config-valantic/issues/new?labels=enhancement)
+
+</div>
+
+---
+
+## About this project
 
 To ensure a high an consistent code quality for SCSS/CSS we use stylelint.
 
 [https://stylelint.io/](https://stylelint.io/)
 
-## Version
-
-Our config is currently optimized for Stylelint 13.0.0 To check for updates, see [https://github.com/stylelint/stylelint/releases](https://github.com/stylelint/stylelint/releases)
-
-**Note that Stylelint is not backwards compatible and linting will fail if the configuration contains settings, which are not known to the current version!**
-
-## Installing stylelint-config-valantic package
+## Quickstart
 
 ```shell
 npm install stylelint-config-valantic stylelint --save-dev
 ```
 
-### Create config
-
-In the root of your project add a `.stylelintrc.js` file and add the following content to enable the valantic config for your project.
+In the root of your project add a `.stylelintrc.js` file and add the following content to enable the valantic config for
+your project.
 
 ```js
 module.exports = {
@@ -30,9 +38,20 @@ module.exports = {
 
 ```
 
+---
+
+## Version
+
+Our config is currently optimized for Stylelint 13.0.0 To check for updates,
+see [https://github.com/stylelint/stylelint/releases](https://github.com/stylelint/stylelint/releases)
+
+**Note that Stylelint is not backwards compatible and linting will fail if the configuration contains settings, which
+are not known to the current version!**
+
 ### Create --fix config
 
-It is recommended to have a separate `--fix` config, that uses some additional rules (e.g. for property order) to hide non-blocking issues from the user but auto apply them on git hooks.
+It is recommended to have a separate `--fix` config, that uses some additional rules (e.g. for property order) to hide
+non-blocking issues from the user but auto apply them on git hooks.
 
 1. Create an additional `.stylelintrc.fix.js` file
 
@@ -45,7 +64,8 @@ module.exports = {
 };
 ```
 
-**NOTE: using `--config` in the fix command will disable the auto-merging of nested stylelint configurations.** It therefore is recommended to move folder specific conigurations to the `overrides` section of the base configuration.
+**NOTE: using `--config` in the fix command will disable the auto-merging of nested stylelint configurations.** It
+therefore is recommended to move folder specific conigurations to the `overrides` section of the base configuration.
 
 ```js
 module.exports = {
@@ -87,7 +107,8 @@ Now you're ready to enable Stylelint in your editor or use it on the command lin
 
 ### PhpStorm
 
-Go to `PhpStorm > Preferences` and search for Stylelint or navigate to `Languages & Frameworks > Stylesheets > Stylelint` and enable it.
+Go to `PhpStorm > Preferences` and search for Stylelint or navigate to
+`Languages & Frameworks > Stylesheets > Stylelint` and enable it.
 
 ### Console
 
@@ -109,4 +130,22 @@ $ npm run stylelint
 
 ### Undefined rule
 
-In case you get errors like "Undefined rule ..." you may have a version conflict between Stylelint and this configuration. Make sure you're using the above mentioned Stylelint version.
+In case you get errors like "Undefined rule ..." you may have a version conflict between Stylelint and this
+configuration. Make sure you're using the above mentioned Stylelint version.
+
+---
+
+<div align="center">
+
+## from valantic - with love
+
+Built and maintained by [valantic](https://www.valantic.com/en/careers/) — we're hiring, check out
+our [open positions](https://www.valantic.com/en/careers/).
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2017-present, valantic CEC Schweiz AG
+
+</div>

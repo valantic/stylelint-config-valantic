@@ -1,23 +1,19 @@
 {
   "name": "stylelint-config-valantic",
-  "version": "10.1.0",
   "description": "Default valantic configuration for stylelint.",
-  "main": "index.js",
-  "scripts": {
-    "test": "stylelint 'tests/*.{css,scss}' --custom-syntax postcss-scss --config index.js",
-    "stylelint": "stylelint -v"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/valantic/stylelint-config-valantic.git"
-  },
   "author": "valantic",
   "license": "ISC",
-  "keywords": [
-    "eslint",
-    "valantic",
-    "eslint-config"
-  ],
+  "version": "10.1.0",
+  "lastDependencyUpdate": "03.03.2026",
+  "engines": {
+    "node": ">=22 <26",
+    "npm": ">=10 <12"
+  },
+  "scripts": {
+    "test": "node tests/run.js",
+    "test:update": "node tests/run.js --update",
+    "stylelint": "stylelint -v"
+  },
   "dependencies": {
     "postcss-scss": "^4.0.9",
     "stylelint-config-html": "^1.1.0",
@@ -28,6 +24,21 @@
   "devDependencies": {
     "stylelint": "^17.4.0"
   },
+  "files": [
+    "index.js",
+    "fix.js",
+    "property-groups"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valantic/stylelint-config-valantic.git"
+  },
+  "keywords": [
+    "eslint",
+    "valantic",
+    "eslint-config"
+  ],
   "peerDependencies": {
     "stylelint": "^17.1.1"
   }
