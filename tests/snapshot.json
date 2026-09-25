@@ -1,0 +1,201 @@
+[
+  {
+    "source": "tests/test.css",
+    "warnings": [
+      {
+        "line": 1,
+        "column": 10,
+        "rule": "block-no-empty",
+        "severity": "error",
+        "text": "Unexpected empty block (block-no-empty)"
+      }
+    ]
+  },
+  {
+    "source": "tests/tests.scss",
+    "warnings": [
+      {
+        "line": 1,
+        "column": 1,
+        "rule": "selector-class-pattern",
+        "severity": "error",
+        "text": "Expected \".tests\" to match pattern \"/^((row)|(col-.*)|(spacing(-.*|$))|(typo--.*)|(align(--.*|$))|(container)|(container-fluid)|(focus)|((\\.?[a-z][a-z]*-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z0-9]+))*)?(--([a-z][a-z]+|h[1-6]|i)(-[a-z0-9]+)*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\\([\"a-z0-9]+\\))?)?))+$/m\" (selector-class-pattern)"
+      },
+      {
+        "line": 2,
+        "column": 10,
+        "rule": "color-named",
+        "severity": "error",
+        "text": "Unexpected named color \"red\" (color-named)"
+      },
+      {
+        "line": 9,
+        "column": 1,
+        "rule": "selector-class-pattern",
+        "severity": "error",
+        "text": "Expected \".c-component1\" to match pattern \"/^((row)|(col-.*)|(spacing(-.*|$))|(typo--.*)|(align(--.*|$))|(container)|(container-fluid)|(focus)|((\\.?[a-z][a-z]*-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z0-9]+))*)?(--([a-z][a-z]+|h[1-6]|i)(-[a-z0-9]+)*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\\([\"a-z0-9]+\\))?)?))+$/m\" (selector-class-pattern)"
+      },
+      {
+        "line": 13,
+        "column": 10,
+        "rule": "block-no-empty",
+        "severity": "error",
+        "text": "Unexpected empty block (block-no-empty)"
+      },
+      {
+        "line": 17,
+        "column": 1,
+        "rule": "selector-class-pattern",
+        "severity": "error",
+        "text": "Expected \".c-block__element__element\" to match pattern \"/^((row)|(col-.*)|(spacing(-.*|$))|(typo--.*)|(align(--.*|$))|(container)|(container-fluid)|(focus)|((\\.?[a-z][a-z]*-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z0-9]+))*)?(--([a-z][a-z]+|h[1-6]|i)(-[a-z0-9]+)*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\\([\"a-z0-9]+\\))?)?))+$/m\" (selector-class-pattern)"
+      },
+      {
+        "line": 18,
+        "column": 10,
+        "rule": "color-hex-length",
+        "severity": "error",
+        "text": "Expected \"#000\" to be \"#000000\" (color-hex-length)"
+      },
+      {
+        "line": 21,
+        "column": 1,
+        "rule": "selector-class-pattern",
+        "severity": "error",
+        "text": "Expected \".c-block__element--modifier--modifier\" to match pattern \"/^((row)|(col-.*)|(spacing(-.*|$))|(typo--.*)|(align(--.*|$))|(container)|(container-fluid)|(focus)|((\\.?[a-z][a-z]*-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z0-9]+))*)?(--([a-z][a-z]+|h[1-6]|i)(-[a-z0-9]+)*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\\([\"a-z0-9]+\\))?)?))+$/m\" (selector-class-pattern)"
+      },
+      {
+        "line": 24,
+        "column": 3,
+        "rule": "at-rule-empty-line-before",
+        "severity": "error",
+        "text": "Unexpected empty line before at-rule (at-rule-empty-line-before)"
+      },
+      {
+        "line": 30,
+        "column": 3,
+        "rule": "order/order",
+        "severity": "error",
+        "text": "Expected declaration to come before @media with a block (order/order)"
+      },
+      {
+        "line": 32,
+        "column": 3,
+        "rule": "order/order",
+        "severity": "error",
+        "text": "Expected @extend to come before declaration (order/order)"
+      },
+      {
+        "line": 34,
+        "column": 3,
+        "rule": "at-rule-empty-line-before",
+        "severity": "error",
+        "text": "Unexpected empty line before at-rule (at-rule-empty-line-before)"
+      },
+      {
+        "line": 41,
+        "column": 3,
+        "rule": "scss/double-slash-comment-whitespace-inside",
+        "severity": "error",
+        "text": "Expected a space after // (scss/double-slash-comment-whitespace-inside)"
+      },
+      {
+        "line": 42,
+        "column": 1,
+        "rule": "selector-class-pattern",
+        "severity": "error",
+        "text": "Expected \".c-blockElement\" to match pattern \"/^((row)|(col-.*)|(spacing(-.*|$))|(typo--.*)|(align(--.*|$))|(container)|(container-fluid)|(focus)|((\\.?[a-z][a-z]*-)([a-z][a-z]+(-([a-z]+|[0-9]+))*)(__[a-z][a-z]+(-([a-z0-9]+))*)?(--([a-z][a-z]+|h[1-6]|i)(-[a-z0-9]+)*)?(:{1,2}[a-z][a-z]+(-[a-z0-9]+)*(\\([\"a-z0-9]+\\))?)?))+$/m\" (selector-class-pattern)"
+      },
+      {
+        "line": 51,
+        "column": 11,
+        "rule": "max-nesting-depth",
+        "severity": "error",
+        "text": "Expected nesting depth to be no more than 4 (max-nesting-depth)"
+      },
+      {
+        "line": 60,
+        "column": 1,
+        "rule": "selector-max-id",
+        "severity": "error",
+        "text": "Expected \"#c-block\" to have no more than 0 ID selectors (selector-max-id)"
+      },
+      {
+        "line": 65,
+        "column": 18,
+        "rule": "declaration-no-important",
+        "severity": "error",
+        "text": "Unexpected !important (declaration-no-important)"
+      },
+      {
+        "line": 69,
+        "column": 4,
+        "rule": "selector-pseudo-element-colon-notation",
+        "severity": "error",
+        "text": "Expected double colon pseudo-element notation (selector-pseudo-element-colon-notation)"
+      },
+      {
+        "line": 75,
+        "column": 1,
+        "rule": "no-duplicate-selectors",
+        "severity": "error",
+        "text": "Unexpected duplicate selector \".c-block\", first used at line 46 (no-duplicate-selectors)"
+      },
+      {
+        "line": 80,
+        "column": 3,
+        "rule": "no-duplicate-selectors",
+        "severity": "error",
+        "text": "Unexpected duplicate selector \"&__element\", first used at line 47 (no-duplicate-selectors)"
+      },
+      {
+        "line": 87,
+        "column": 5,
+        "rule": "no-duplicate-selectors",
+        "severity": "error",
+        "text": "Unexpected duplicate selector \"&--modifier\", first used at line 48 (no-duplicate-selectors)"
+      },
+      {
+        "line": 105,
+        "column": 1,
+        "rule": "selector-max-id",
+        "severity": "error",
+        "text": "Expected \"#container a\" to have no more than 0 ID selectors (selector-max-id)"
+      },
+      {
+        "line": 116,
+        "column": 5,
+        "rule": "named-grid-areas-no-invalid",
+        "severity": "error",
+        "text": "Expected single filled-in rectangle for \"a\" (named-grid-areas-no-invalid)"
+      },
+      {
+        "line": 123,
+        "column": 5,
+        "rule": "named-grid-areas-no-invalid",
+        "severity": "error",
+        "text": "Expected same number of cell tokens in each string (named-grid-areas-no-invalid)"
+      },
+      {
+        "line": 127,
+        "column": 24,
+        "rule": "named-grid-areas-no-invalid",
+        "severity": "error",
+        "text": "Expected cell token within string (named-grid-areas-no-invalid)"
+      },
+      {
+        "line": 132,
+        "column": 3,
+        "rule": "declaration-block-no-duplicate-custom-properties",
+        "severity": "error",
+        "text": "Unexpected duplicate \"--custom-property\" (declaration-block-no-duplicate-custom-properties)"
+      },
+      {
+        "line": 135,
+        "column": 50,
+        "rule": "selector-attribute-quotes",
+        "severity": "error",
+        "text": "Expected quotes around \"_blank\" (selector-attribute-quotes)"
+      }
+    ]
+  }
+]

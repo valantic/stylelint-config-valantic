@@ -26,11 +26,14 @@ and optionally layers the stricter `fix` config (see Architecture below) for aut
 
 ## Commands
 
-- `npm test` — runs Stylelint against the fixture files in `tests/*.{css,scss}` using this repo's own `index.js`
-  config (`stylelint 'tests/*.{css,scss}' --custom-syntax postcss-scss --config index.js`). This is effectively a
-  self-lint / regression check: it should pass cleanly against the fixtures in `tests/` and `tests/more/`. There is no
-  separate per-file test invocation — run `npm test` as a whole, or point `stylelint` at a single fixture manually,
-  e.g. `npx stylelint tests/test.css --custom-syntax postcss-scss --config index.js`.
+- `npm test` — runs `tests/run.js`, which lints `tests/*.{css,scss}` (not `tests/more/**`, which is not wired into
+  any script) with this repo's own `index.js` config and compares the resulting warnings against the committed
+  snapshot `tests/snapshot.json`. `tests/test.css`/`tests/tests.scss` are fixtures deliberately full of violations
+  (each annotated `// This line should give error about X`), so the test never expects a clean lint — it expects the
+  *same* warnings as last time. It passes when warnings match the snapshot and fails (non-zero exit, diff printed) when
+  they differ, i.e. when a rule change in `index.js` starts/stops flagging something in the fixtures.
+- `npm run test:update` — re-lints the fixtures and overwrites `tests/snapshot.json` with the current warnings. Run
+  this and review the diff whenever a rule change in `index.js` intentionally changes what the fixtures flag.
 - `npm run stylelint` — prints the installed Stylelint version (`stylelint -v`); not a lint run.
 
 There is no lint/build/format script for the config's own source files (`index.js`, `fix.js`, `property-groups/*.js`)
@@ -52,10 +55,12 @@ beyond `npm test`.
   `5_animation.js`, `6_misc.js`. Each file exports a flat array of property names/patterns for that group. Preserve
   this numeric ordering and grouping when adding new properties — the array order in `fix.js` output is derived
   directly from file load order.
-- `tests/` contains real-world SCSS/CSS fixtures (a top-level `test.css`/`tests.scss` plus many component fixtures
-  under `tests/more/`) that `npm test` lints against `index.js`. These act as regression fixtures: when changing a
-  rule in `index.js`, check whether it now flags something in `tests/` and update the rule or the fixture accordingly.
-  `tests/` is excluded from the published npm package (not in `package.json`'s `files` allow-list).
+- `tests/` contains the fixtures (`test.css`/`tests.scss`) and the snapshot test runner (`run.js`,
+  `snapshot.json`) described under Commands above, plus many real-world component fixtures under `tests/more/` that
+  are not currently linted by any script. When changing a rule in `index.js`, run `npm test` to see whether it now
+  flags something differently in `tests/*.{css,scss}` and either fix the rule or run `npm run test:update` to accept
+  the new expected output. `tests/` is excluded from the published npm package (not in `package.json`'s `files`
+  allow-list).
 - Peer dependency: `stylelint` (`^17.1.1`, per `package.json`). The README notes the config targets a specific
   Stylelint major version and warns that linting fails with "Undefined rule" errors on version mismatches, since
   Stylelint is not backwards compatible across majors — keep `index.js`/`fix.js` rule names in sync with whatever

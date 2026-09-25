@@ -10,7 +10,8 @@
     "npm": ">=10 <12"
   },
   "scripts": {
-    "test": "stylelint 'tests/*.{css,scss}' --custom-syntax postcss-scss --config index.js",
+    "test": "node tests/run.js",
+    "test:update": "node tests/run.js --update",
     "stylelint": "stylelint -v"
   },
   "dependencies": {
