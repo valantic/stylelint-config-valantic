@@ -1,22 +1,27 @@
+<div align="center">
+
 # valantic stylelint configuration
+
+**Default valantic configuration for stylelint.**
+
+[**Report an Issue**](https://github.com/valantic/stylelint-config-valantic/issues/new) ·
+[**Request a Feature**](https://github.com/valantic/stylelint-config-valantic/issues/new?labels=enhancement)
+
+</div>
+
+---
+
+## About this project
 
 To ensure a high an consistent code quality for SCSS/CSS we use stylelint.
 
 [https://stylelint.io/](https://stylelint.io/)
 
-## Version
-
-Our config is currently optimized for Stylelint 13.0.0 To check for updates, see [https://github.com/stylelint/stylelint/releases](https://github.com/stylelint/stylelint/releases)
-
-**Note that Stylelint is not backwards compatible and linting will fail if the configuration contains settings, which are not known to the current version!**
-
-## Installing stylelint-config-valantic package
+## Quickstart
 
 ```shell
 npm install stylelint-config-valantic stylelint --save-dev
 ```
-
-### Create config
 
 In the root of your project add a `.stylelintrc.js` file and add the following content to enable the valantic config for your project.
 
@@ -29,6 +34,14 @@ module.exports = {
 }
 
 ```
+
+---
+
+## Version
+
+Our config is currently optimized for Stylelint 13.0.0 To check for updates, see [https://github.com/stylelint/stylelint/releases](https://github.com/stylelint/stylelint/releases)
+
+**Note that Stylelint is not backwards compatible and linting will fail if the configuration contains settings, which are not known to the current version!**
 
 ### Create --fix config
 
@@ -110,3 +123,19 @@ $ npm run stylelint
 ### Undefined rule
 
 In case you get errors like "Undefined rule ..." you may have a version conflict between Stylelint and this configuration. Make sure you're using the above mentioned Stylelint version.
+
+---
+
+<div align="center">
+
+## from valantic - with love
+
+Built and maintained by [valantic](https://www.valantic.com/en/careers/) — we're hiring, check out our [open positions](https://www.valantic.com/en/careers/).
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2017-present, valantic CEC Schweiz AG
+
+</div>
