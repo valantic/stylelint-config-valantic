@@ -16,6 +16,10 @@
     "type": "git",
     "url": "https://github.com/valantic/stylelint-config-valantic.git"
   },
+  "engines": {
+    "node": ">=22 <26",
+    "npm": ">=10 <12"
+  },
   "author": "valantic",
   "license": "ISC",
   "keywords": [
