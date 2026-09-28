@@ -12,6 +12,9 @@
   "scripts": {
     "test": "node tests/run.js",
     "test:update": "node tests/run.js --update",
+    "release": "node scripts/release.mjs patch",
+    "release:minor": "node scripts/release.mjs minor",
+    "release:major": "node scripts/release.mjs major",
     "stylelint": "stylelint -v"
   },
   "dependencies": {

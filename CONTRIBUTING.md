@@ -13,20 +13,26 @@
 
 ## Releasing
 
-* Make sure, you have described your changes in the file [CHANGELOG.md](CHANGELOG.md) below the `## unreleased`
-  header, following the changelog convention in [AGENTS.md](AGENTS.md#changelog-required-for-every-task)
-* Create a release branch `release/x.x.x` according to SemVer
-* Move all changes in the file [CHANGELOG.md](CHANGELOG.md) from below `## unreleased` below a new header with the
-  to be released version eg: `## v1.2.3`, and add a fresh empty `## unreleased` header above it
-* Change the Version in the file [package.json](package.json)
-* Run `npm i` to update the version in the file [package-lock.json](package-lock.json)  
-* Create a Git Tag with the to be released version number ` git tag 6.5.0`
-* Commit and Push the changes to the Release branch (Make sure to also push Tags)
-* Switch to the `master` branch
-* Merge the release branch into `master` and push the changes
-* Login to NPM `npm login` if you not already are logged in
-* Push the Release `npm publish`
-* [Create the Release](https://github.com/valantic/stylelint-config-valantic/releases/new) on the github repo  with the 
-  changes from the [CHANGELOG.md](CHANGELOG.md)
-* Merge master back to develop
-* Make sure you have pushed all changes to the Repo
+Releases are made directly from `master`. Tags are always `vX.Y.Z`.
+
+1. Make sure all changes are merged into `master` and described under `## unreleased` in
+   [CHANGELOG.md](CHANGELOG.md).
+2. On an up-to-date `master`, run one of these (see [SemVer](https://semver.org/)):
+   - `npm run release` — patch
+   - `npm run release:minor` — minor
+   - `npm run release:major` — major
+
+   `scripts/release.mjs` aborts without changing anything if the working tree is not clean, `master` is behind
+   `origin/master`, or `## unreleased` is empty. Otherwise it bumps the version in `package.json` and
+   `package-lock.json`, renames `## unreleased` to `## vX.Y.Z` (adding a fresh `## unreleased` above it), updates
+   the version pin in `README.md` if there is one, commits `Release vX.Y.Z`, creates the annotated tag `vX.Y.Z` and
+   pushes both.
+3. Publish the package to npm: `npm publish` (log in with `npm login` first if needed). This stays a manual step
+   because it needs your npm authentication.
+4. The `Release` workflow (`.github/workflows/release.yml`) creates the GitHub release for the pushed tag, using that
+   version's `CHANGELOG.md` section as release notes. Check it on
+   [GitHub releases](https://github.com/valantic/stylelint-config-valantic/releases).
+
+`scripts/release.mjs` is shared by all valantic shared-frontend repos — keep the copies identical.
+
+This repo still uses `master` as its default branch; it is planned to move to `main` like the other repos.

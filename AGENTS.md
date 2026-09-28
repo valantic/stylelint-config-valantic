@@ -35,6 +35,13 @@ and optionally layers the stricter `fix` config (see Architecture below) for aut
 - `npm run test:update` — re-lints the fixtures and overwrites `tests/snapshot.json` with the current warnings. Run
   this and review the diff whenever a rule change in `index.js` intentionally changes what the fixtures flag.
 - `npm run stylelint` — prints the installed Stylelint version (`stylelint -v`); not a lint run.
+- `npm run release[:minor|:major]` — runs `scripts/release.mjs` (shared, identical in every shared-frontend repo):
+  checks for a clean, up-to-date `master` (this
+  repo has not moved to `main` yet) and a non-empty `## unreleased`, bumps the version, renames
+  `## unreleased` to `## vX.Y.Z`, updates the README version pin, commits, creates the annotated `vX.Y.Z` tag and
+  pushes. The `Release` workflow (`.github/workflows/release.yml`) then creates the GitHub release from that
+  changelog section. Publishing to npm (`npm publish`) is a separate, manual step afterwards. See `CONTRIBUTING.md`. **Never run a release script or `npm publish` unless explicitly
+  asked.**
 
 There is no lint/build/format script for the config's own source files (`index.js`, `fix.js`, `property-groups/*.js`)
 beyond `npm test`.
@@ -65,9 +72,7 @@ beyond `npm test`.
   Stylelint major version and warns that linting fails with "Undefined rule" errors on version mismatches, since
   Stylelint is not backwards compatible across majors — keep `index.js`/`fix.js` rule names in sync with whatever
   Stylelint version is targeted in `package.json`'s `peerDependencies`.
-- Release process (see `CONTRIBUTING.md`): changes are logged in `CHANGELOG.md` under `## unreleased` (see Changelog below),
-  then moved under a `## vX.Y.Z` heading at release time; version is bumped in `package.json`/`package-lock.json`; a git tag and GitHub
-  release are created; then `npm publish`. Do not perform these steps unless explicitly asked.
+- Release process: see the `npm run release` entry under Commands above and `CONTRIBUTING.md`.
 
 ## Changelog (required for every task)
 

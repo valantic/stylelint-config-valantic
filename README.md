@@ -133,6 +133,10 @@ $ npm run stylelint
 In case you get errors like "Undefined rule ..." you may have a version conflict between Stylelint and this
 configuration. Make sure you're using the above mentioned Stylelint version.
 
+## Contributing
+
+How to contribute and how releases are made is described in [CONTRIBUTING.md](./CONTRIBUTING.md).
+
 ---
 
 <div align="center">
