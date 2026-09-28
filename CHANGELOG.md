@@ -2,6 +2,9 @@
 
 ## unreleased
 
+- [docs] Added `docs/` (with an index at `docs/README.md`) describing the base config (`index.js`), the fix config
+  (`fix.js`), and the `property-groups/` property-order categories, moved from the internal workspace knowledge
+  base into the repo itself.
 - [ci] Aligned `.github/workflows/test.yml` with the other shared-frontend repos: job `test`, step "Run tests"
   (the old label claimed checks that don't run here), Node version read from `.nvmrc`, token limited to
   `contents: read`.
