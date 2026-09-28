@@ -2,6 +2,9 @@
 
 ## unreleased
 
+- [docs] Restructured `AGENTS.md` to the shared outline and added the shared `## Working rules` section (git rules, no
+  release/publish or dependency changes without approval, engineering priorities, `npm test` before finishing).
+- [docs] Completed `CONTRIBUTING.md` with the shared outline (Getting started / Developing / Changelog / Releasing).
 - [docs] Added a `## Contributing` section to `README.md` linking `CONTRIBUTING.md` (contribution and release steps).
 - [build] Added `npm run release[:minor|:major]` (releases were fully manual before), running the shared
   `scripts/release.mjs`. It releases from an up-to-date `master` only, aborts on uncommitted changes or an empty

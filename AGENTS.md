@@ -74,6 +74,25 @@ beyond `npm test`.
   Stylelint version is targeted in `package.json`'s `peerDependencies`.
 - Release process: see the `npm run release` entry under Commands above and `CONTRIBUTING.md`.
 
+## Working rules
+
+These rules are identical in every valantic shared-frontend repo.
+
+- Git: never commit unless explicitly asked. Never push unless explicitly asked in that request. Never pull or
+  create/switch branches (`git pull`, `git checkout`, `git switch`, `git branch`, …). Branch names are
+  `feature/<name>` or `bugfix/<name>`.
+- Never run a release script or `npm publish` unless explicitly asked.
+- Never install, update or remove npm packages without approval. Never edit generated or vendored files
+  (`node_modules/`, `dist/`, lock files by hand).
+- Priorities: correctness, simplicity, consistency with the existing code, maintainability, minimal changes. Prefer the
+  smallest correct change.
+- Understand the existing code and search for existing implementations before adding new ones; reuse over new
+  abstractions. Do not refactor unrelated code, change public APIs, or change behavior outside the task's scope.
+- Before finishing, run `npm test` and fix failures caused by the change. Every change gets a changelog entry and,
+  where a feature changes, a doc update (see Changelog and Documentation below).
+- If a requirement is unclear, ask. If only an implementation detail is unclear, follow the existing patterns in this
+  repo.
+
 ## Changelog (required for every task)
 
 `CHANGELOG.md` follows the convention shared by all valantic shared-frontend repos.
