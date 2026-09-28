@@ -2,7 +2,7 @@
   "name": "stylelint-config-valantic",
   "description": "Default valantic configuration for stylelint.",
   "author": "valantic",
-  "license": "ISC",
+  "license": "MIT",
   "version": "10.1.0",
   "lastDependencyUpdate": "03.03.2026",
   "engines": {

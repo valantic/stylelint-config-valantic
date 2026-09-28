@@ -2,6 +2,8 @@
 
 ## unreleased
 
+- [chore] Fixed the `license` field in `package.json`: it said `ISC`, while `LICENSE` and the README have always
+  been MIT. Harmonized the copyright line in `LICENSE` to `2017-present, valantic CEC Schweiz AG`.
 - [docs] Restructured `AGENTS.md` to the shared outline and added the shared `## Working rules` section (git rules, no
   release/publish or dependency changes without approval, engineering priorities, `npm test` before finishing).
 - [docs] Completed `CONTRIBUTING.md` with the shared outline (Getting started / Developing / Changelog / Releasing).
