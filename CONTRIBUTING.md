@@ -13,10 +13,11 @@
 
 ## Releasing
 
-* Make sure, you have described your changes in the file [CHANGES.md](CHANGES.md)
+* Make sure, you have described your changes in the file [CHANGELOG.md](CHANGELOG.md) below the `## unreleased`
+  header, following the changelog convention in [AGENTS.md](AGENTS.md#changelog-required-for-every-task)
 * Create a release branch `release/x.x.x` according to SemVer
-* Move all changes in the file [CHANGES.md](CHANGES.md) from below `## Next` below a new Paragraph with the 
-  to be released version
+* Move all changes in the file [CHANGELOG.md](CHANGELOG.md) from below `## unreleased` below a new header with the
+  to be released version eg: `## v1.2.3`, and add a fresh empty `## unreleased` header above it
 * Change the Version in the file [package.json](package.json)
 * Run `npm i` to update the version in the file [package-lock.json](package-lock.json)  
 * Create a Git Tag with the to be released version number ` git tag 6.5.0`
@@ -26,6 +27,6 @@
 * Login to NPM `npm login` if you not already are logged in
 * Push the Release `npm publish`
 * [Create the Release](https://github.com/valantic/stylelint-config-valantic/releases/new) on the github repo  with the 
-  changes from the [CHANGES.md](CHANGES.md)
+  changes from the [CHANGELOG.md](CHANGELOG.md)
 * Merge master back to develop
 * Make sure you have pushed all changes to the Repo

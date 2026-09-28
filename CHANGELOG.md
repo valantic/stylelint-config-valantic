@@ -1,68 +1,75 @@
-### Next
-- (Change) Added `.github/workflows/test.yml` (previously missing), a "CI Test" workflow running on
+# Changelog
+
+## unreleased
+
+- [docs] Renamed `CHANGES.md` to `CHANGELOG.md` and adopted the shared shared-frontend changelog convention
+  (`unreleased` / `vX.Y.Z` headings, `[feat]`/`[fix]`/… prefixes, `### Breaking Changes` with migration notes),
+  documented in `AGENTS.md` and `CONTRIBUTING.md`. Released version headings were normalized to `## vX.Y.Z`; their
+  entries are unchanged.
+- [ci] Added `.github/workflows/test.yml` (previously missing), a "CI Test" workflow running on
   `actions/checkout@v7` / `actions/setup-node@v7` with Node 25.
-- (Change) Added `.github/PULL_REQUEST_TEMPLATE.md` (previously missing), matching the streamlined, checklist-free
+- [docs] Added `.github/PULL_REQUEST_TEMPLATE.md` (previously missing), matching the streamlined, checklist-free
   template used across other valantic shared-frontend repos.
-- (Change) Added a `files` allow-list to `package.json` (and removed the now-redundant `.npmignore`) so the published
+- [build] Added a `files` allow-list to `package.json` (and removed the now-redundant `.npmignore`) so the published
   package only ships `index.js`, `fix.js`, `property-groups/`, `package.json`, `LICENSE` and `README.md` — dev/test
   files (`tests/`, docs) are no longer installed by consumers.
 
-### 10.1.0
+## v10.1.0
 - (Change) Update stylelint to version 17.4.0.
 - (Change) Remove 'declaration-property-value-no-unknown' rule.
 
-### 10.0.0
+## v10.0.0
 - (Breaking) Requires stylelint version 17. (Check Migration guide https://github.com/stylelint/stylelint/blob/17.1.1/docs/migration-guide/to-17.md)
 
-### 9.1.0
+## v9.1.0
 - (Change) Introduces new rule for 'color-function-alias-notation' set to 'with-alpha'.
 - (Change) Updates dependencies.
 
-### 9.0.0
+## v9.0.0
 - (Breaking) Requires stylelint version 16. (Check Migration guide https://github.com/stylelint/stylelint/blob/16.0.0/docs/migration-guide/to-16.md)
 
-### 8.0.1
+## v8.0.1
 - (Bugfix) Fixes typo for repository in package.json.
 
-### 8.0.0
+## v8.0.0
 - (Breaking) Requires stylelint version 15. (Check Migration guide if you need to update stylelint: https://github.com/stylelint/stylelint/blob/main/docs/migration-guide/to-15.md)
 
-### 7.1.5
+## v7.1.5
 - (Change) Switches 'dollar-variables' and 'custom-properties' on 'order/order' to allow usage of scss variables in custom properties.
 
-### 7.1.4
+## v7.1.4
 - (Change) Extends documentation with information on how to handle folder specific configurations.
 
-### 7.1.3
+## v7.1.3
 - (Change) Moves `background` properties after 'specific', `border` and `fill` properties.
 
-### 7.1.2
+## v7.1.2
 - (Change) Moves `color` to `typography` section for property order.
 
-### 7.1.1
+## v7.1.1
 - (Change) Weakens class regex to allow `.typo--` classes.
 
-### 7.1.0
+## v7.1.0
 - (Feature) Adds support for --fix and unified property order.
 
-### 7.0.0
+## v7.0.0
 - (Change) Loosening 'max-line-length' to allow a length of 130 characters.
 - (Change) Loosening 'declaration-block-no-redundant-longhand-properties' to allow grid-template with redundant longhand properties.
 - (Breaking) Requires stylelint-scss installed separately.
 
-### 6.5.1
+## v6.5.1
 
 - (Bugfix) Uses stylelint-config-standard instead of stylelint-config-standard-scss to better match our conventions.
 
-### 6.5.0
+## v6.5.0
 - (Update) Updates dependencies.
 
-### 6.4.0
+## v6.4.0
 - (Feature) Adds new linting rules from stylelint 13.13.0.
 
-### 6.3.0
+## v6.3.0
  - (Feature) Adds support for @property at rule.
 
-### 6.2.1
+## v6.2.1
  - (Feature) Enables support for custom element selectors.
  - (Change) Disables no-descending-specificity rule.

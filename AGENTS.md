@@ -65,9 +65,33 @@ beyond `npm test`.
   Stylelint major version and warns that linting fails with "Undefined rule" errors on version mismatches, since
   Stylelint is not backwards compatible across majors — keep `index.js`/`fix.js` rule names in sync with whatever
   Stylelint version is targeted in `package.json`'s `peerDependencies`.
-- Release process (see `CONTRIBUTING.md`): changes are logged in `CHANGES.md` under `## Next`, then moved under a
-  version heading at release time; version is bumped in `package.json`/`package-lock.json`; a git tag and GitHub
+- Release process (see `CONTRIBUTING.md`): changes are logged in `CHANGELOG.md` under `## unreleased` (see Changelog below),
+  then moved under a `## vX.Y.Z` heading at release time; version is bumped in `package.json`/`package-lock.json`; a git tag and GitHub
   release are created; then `npm publish`. Do not perform these steps unless explicitly asked.
+
+## Changelog (required for every task)
+
+`CHANGELOG.md` follows the convention shared by all valantic shared-frontend repos.
+
+- Every change that alters behavior, fixes a bug, or adds/removes something consumers can see gets one entry under
+  `## unreleased` in the same change — do not defer it to a follow-up task.
+- Format: `- [type] Description.` — one entry per logical change, kept as a flat list (no "Added"/"Fixed" category
+  subheadings), so each entry stays self-contained and merge conflicts can be resolved line by line.
+- Allowed prefixes ([Conventional Commits](https://www.conventionalcommits.org/) types): `[feat]`, `[fix]`,
+  `[refactor]`, `[perf]`, `[docs]`, `[test]`, `[build]`, `[ci]`, `[chore]`, `[revert]`. Older prefixes in released
+  sections (`[ENHANCEMENT]`, `(Change)`, …) are history — do not reuse them and do not rewrite old entries.
+- Write the description so it is understandable without the diff: name the affected module and the effect for
+  consumers.
+- Breaking changes are grouped under a `### Breaking Changes` subheading placed directly under `## unreleased`, above
+  the regular entries. They keep their prefix and must end with a **Migration:** sentence stating what consumers
+  have to do.
+- A change is breaking if it raises the major version of the `stylelint` peer, drops a supported Node.js/Stylelint
+  version, or removes/renames an exported config file (`index.js`, `fix.js`). A new or stricter rule (or a changed
+  property order in `property-groups/`) that only makes consumers fix their code is not breaking: log it as `[feat]`
+  naming the rule, and release it as at least a minor version.
+- Headings: title `# Changelog`, unreleased section `## unreleased` (exact, lowercase — release tooling matches it
+  literally), released sections `## vX.Y.Z`. Only the unreleased section is edited; released sections stay as they
+  are.
 
 ## Documentation
 
