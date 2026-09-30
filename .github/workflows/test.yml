@@ -2,10 +2,10 @@ name: CI Test
 
 on:
   pull_request:
-    branches: ['master']
+    branches: ['main']
 
   push:
-    branches: ['master']
+    branches: ['main']
 
 permissions:
   contents: read

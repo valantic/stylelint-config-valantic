@@ -10,7 +10,7 @@
 
 ## Developing
 
-- Create a branch from `master`: `feature/<name>` or `bugfix/<name>`.
+- Create a branch from `main`: `feature/<name>` or `bugfix/<name>`.
 - Extend the fixtures in `tests/` so they cover added or changed rules, then review and accept the new warnings with
   `npm run test:update`.
 - Check the [Stylelint release notes](https://stylelint.io/CHANGELOG) for relevant new features.
@@ -27,17 +27,17 @@ Breaking changes go under `### Breaking Changes` with a **Migration:** note. The
 
 ## Releasing
 
-Releases are made directly from `master`. Tags are always `vX.Y.Z`.
+Releases are made directly from `main`. Tags are always `vX.Y.Z`.
 
-1. Make sure all changes are merged into `master` and described under `## unreleased` in
+1. Make sure all changes are merged into `main` and described under `## unreleased` in
    [CHANGELOG.md](CHANGELOG.md).
-2. On an up-to-date `master`, run one of these (see [SemVer](https://semver.org/)):
+2. On an up-to-date `main`, run one of these (see [SemVer](https://semver.org/)):
    - `npm run release` — patch
    - `npm run release:minor` — minor
    - `npm run release:major` — major
 
-   `scripts/release.mjs` aborts without changing anything if the working tree is not clean, `master` is behind
-   `origin/master`, or `## unreleased` is empty. Otherwise it bumps the version in `package.json` and
+   `scripts/release.mjs` aborts without changing anything if the working tree is not clean, the release branch is
+   behind its remote, or `## unreleased` is empty. Otherwise it bumps the version in `package.json` and
    `package-lock.json`, renames `## unreleased` to `## vX.Y.Z` (adding a fresh `## unreleased` above it), updates
    the version pin in `README.md` if there is one, commits `Release vX.Y.Z`, creates the annotated tag `vX.Y.Z` and
    pushes both.
@@ -50,5 +50,3 @@ Releases are made directly from `master`. Tags are always `vX.Y.Z`.
    [GitHub releases](https://github.com/valantic/stylelint-config-valantic/releases).
 
 `scripts/release.mjs` is shared by all valantic shared-frontend repos — keep the copies identical.
-
-This repo still uses `master` as its default branch; it is planned to move to `main` like the other repos.

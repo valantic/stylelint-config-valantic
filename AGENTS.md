@@ -36,8 +36,7 @@ and optionally layers the stricter `fix` config (see Architecture below) for aut
   this and review the diff whenever a rule change in `index.js` intentionally changes what the fixtures flag.
 - `npm run stylelint` — prints the installed Stylelint version (`stylelint -v`); not a lint run.
 - `npm run release[:minor|:major]` — runs `scripts/release.mjs` (shared, identical in every shared-frontend repo):
-  checks for a clean, up-to-date `master` (this
-  repo has not moved to `main` yet) and a non-empty `## unreleased`, bumps the version, renames
+  checks for a clean, up-to-date release branch (`main`) and a non-empty `## unreleased`, bumps the version, renames
   `## unreleased` to `## vX.Y.Z`, updates the README version pin, commits, creates the annotated `vX.Y.Z` tag and
   pushes. The `Release` workflow (`.github/workflows/release.yml`) then creates the GitHub release from that
   changelog section. Publishing to npm (`npm publish`) is a separate, manual step afterwards. See `CONTRIBUTING.md`. **Never run a release script or `npm publish` unless explicitly

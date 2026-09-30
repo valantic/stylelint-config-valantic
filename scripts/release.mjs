@@ -10,8 +10,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const RELEASE_TYPES = ['patch', 'minor', 'major'];
-// TODO: Remove 'master' once stylelint-config-valantic has moved to 'main'.
-const RELEASE_BRANCHES = ['main', 'master'];
+const RELEASE_BRANCHES = ['main'];
 const UNRELEASED_HEADING = /^## unreleased$/m;
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
