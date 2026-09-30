@@ -3,7 +3,7 @@
   "description": "Default valantic configuration for stylelint.",
   "author": "valantic",
   "license": "MIT",
-  "version": "10.1.0",
+  "version": "10.1.1",
   "lastDependencyUpdate": "03.03.2026",
   "engines": {
     "node": ">=22 <26",

@@ -2,6 +2,8 @@
 
 ## unreleased
 
+## v10.1.1
+
 - [ci] Default branch renamed from `master` to `main`: `test.yml`/`security.yml` triggers, `CONTRIBUTING.md`, and
   `AGENTS.md` now reference `main`.
 - [chore] `scripts/release.mjs`: dropped the temporary `master` fallback from `RELEASE_BRANCHES` now that the
