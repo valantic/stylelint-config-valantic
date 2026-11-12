@@ -32,9 +32,8 @@ Releases are made directly from `main`. Tags are always `vX.Y.Z`.
 1. Make sure all changes are merged into `main` and described under `## unreleased` in
    [CHANGELOG.md](CHANGELOG.md).
 2. On an up-to-date `main`, run one of these (see [SemVer](https://semver.org/)):
-   - `npm run release` — patch
-   - `npm run release:minor` — minor
-   - `npm run release:major` — major
+   - `npm run release` — asks which release type to make (patch, minor or major)
+   - `npm run release:patch`, `npm run release:minor`, `npm run release:major` — skip the question
 
    `scripts/release.mjs` aborts without changing anything if the working tree is not clean, the release branch is
    behind its remote, or `## unreleased` is empty. Otherwise it bumps the version in `package.json` and

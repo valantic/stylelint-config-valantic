@@ -2,6 +2,9 @@
 
 ## unreleased
 
+- [build] `npm run release` now asks which release type (patch, minor, major) to make; `release:patch` added as the
+  non-interactive variant.
+
 ## v10.1.1
 
 - [ci] Default branch renamed from `master` to `main`: `test.yml`/`security.yml` triggers, `CONTRIBUTING.md`, and
