@@ -1,5 +1,6 @@
 /**
- * Releases a new version: node scripts/release.mjs <patch|minor|major>
+ * Releases a new version: node scripts/release.mjs [patch|minor|major]
+ * Without an argument the release type is asked interactively.
  *
  * Shared by all valantic shared-frontend repos (keep the copies identical). Runs every step explicitly instead of
  * relying on npm lifecycle hooks, because `.npmrc` sets `ignore-scripts=true`, which makes `npm version` skip them.
@@ -7,6 +8,7 @@
 import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
+import { createInterface } from 'node:readline/promises';
 import { fileURLToPath } from 'node:url';
 
 const RELEASE_TYPES = ['patch', 'minor', 'major'];
@@ -16,6 +18,7 @@ const UNRELEASED_HEADING = /^## unreleased$/m;
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const changelogPath = path.resolve(root, 'CHANGELOG.md');
 const readmePath = path.resolve(root, 'README.md');
+const packagePath = path.resolve(root, 'package.json');
 
 /**
  * Runs a command in the repository root without a shell and returns its trimmed output.
@@ -58,10 +61,58 @@ function getUnreleasedEntries(changelog) {
   return changelog.slice(sectionStart, nextSection === -1 ? undefined : sectionStart + nextSection).trim();
 }
 
-const releaseType = process.argv[2];
+/**
+ * Returns the version that results from a release of the given type.
+ *
+ * @param {string} version - The current version (`major.minor.patch`).
+ * @param {string} type - One of RELEASE_TYPES.
+ *
+ * @returns {string}
+ */
+function getNextVersion(version, type) {
+  const [major, minor, patch] = version.split('.').map(Number);
+
+  if (type === 'major') {
+    return `${major + 1}.0.0`;
+  }
+
+  return type === 'minor' ? `${major}.${minor + 1}.0` : `${major}.${minor}.${patch + 1}`;
+}
+
+/**
+ * Asks which release type to make. There is deliberately no default, so a release is never made by accident.
+ *
+ * @returns {Promise<string>}
+ */
+async function askReleaseType() {
+  if (!process.stdin.isTTY) {
+    abort(`no release type given. Pass one of ${RELEASE_TYPES.join(', ')} as argument.`);
+  }
+
+  const { version } = JSON.parse(readFileSync(packagePath, 'utf8'));
+  const readline = createInterface({ input: process.stdin, output: process.stdout });
+
+  process.stdout.write(`Current version: ${version}\n`);
+  RELEASE_TYPES.forEach((type, index) => {
+    process.stdout.write(`  ${index + 1}) ${type.padEnd(5)} -> ${getNextVersion(version, type)}\n`);
+  });
+
+  const answer = await readline.question('Which release? [1-3 or name] ');
+
+  readline.close();
+
+  const normalizedAnswer = answer.trim().toLowerCase();
+
+  return (
+    RELEASE_TYPES.find((type, index) => normalizedAnswer === type || normalizedAnswer === String(index + 1)) ??
+    abort(`unknown release type "${answer}".`)
+  );
+}
+
+const releaseType = process.argv[2] ?? (await askReleaseType());
 
 if (!RELEASE_TYPES.includes(releaseType)) {
-  abort(`expected one of ${RELEASE_TYPES.join(', ')} as argument, got "${releaseType ?? ''}".`);
+  abort(`expected one of ${RELEASE_TYPES.join(', ')} as argument, got "${releaseType}".`);
 }
 
 // 1. Checks - nothing has been changed until all of them pass.

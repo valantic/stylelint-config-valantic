@@ -35,7 +35,7 @@ and optionally layers the stricter `fix` config (see Architecture below) for aut
 - `npm run test:update` — re-lints the fixtures and overwrites `tests/snapshot.json` with the current warnings. Run
   this and review the diff whenever a rule change in `index.js` intentionally changes what the fixtures flag.
 - `npm run stylelint` — prints the installed Stylelint version (`stylelint -v`); not a lint run.
-- `npm run release[:minor|:major]` — runs `scripts/release.mjs` (shared, identical in every shared-frontend repo):
+- `npm run release[:patch|:minor|:major]` — asks for the release type unless a suffix is given; runs `scripts/release.mjs` (shared, identical in every shared-frontend repo):
   checks for a clean, up-to-date release branch (`main`) and a non-empty `## unreleased`, bumps the version, renames
   `## unreleased` to `## vX.Y.Z`, updates the README version pin, commits, creates the annotated `vX.Y.Z` tag and
   pushes. The `Release` workflow (`.github/workflows/release.yml`) then creates the GitHub release from that
